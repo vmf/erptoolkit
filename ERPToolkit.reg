@@ -1,0 +1,729 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.Class.MethodInformation]
+@="ERPToolkit.App.Class.MethodInformation"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.Class.MethodInformation\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000028}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000028}]
+@="ERPToolkit.App.Class.MethodInformation"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000028}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.App.Class.MethodInformation"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000028}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.App.Class.MethodInformation"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000028}\ProgId]
+@="ERPToolkit.App.Class.MethodInformation"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000028}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.Class.Resource]
+@="ERPToolkit.App.Class.Resource"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.Class.Resource\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000029}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000029}]
+@="ERPToolkit.App.Class.Resource"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000029}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.App.Class.Resource"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000029}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.App.Class.Resource"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000029}\ProgId]
+@="ERPToolkit.App.Class.Resource"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000029}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Constants]
+@="ERPToolkit.Class.Constants"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Constants\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000001}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000001}]
+@="ERPToolkit.Class.Constants"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000001}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.Constants"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000001}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.Constants"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000001}\ProgId]
+@="ERPToolkit.Class.Constants"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000001}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.Class.VisualStyles]
+@="ERPToolkit.App.Class.VisualStyles"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.Class.VisualStyles\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000027}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000027}]
+@="ERPToolkit.App.Class.VisualStyles"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000027}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.App.Class.VisualStyles"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000027}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.App.Class.VisualStyles"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000027}\ProgId]
+@="ERPToolkit.App.Class.VisualStyles"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000027}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.ScriptRefactor]
+@="ERPToolkit.Class.ScriptRefactor"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.ScriptRefactor\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000008}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000008}]
+@="ERPToolkit.Class.ScriptRefactor"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000008}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.ScriptRefactor"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000008}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.ScriptRefactor"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000008}\ProgId]
+@="ERPToolkit.Class.ScriptRefactor"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000008}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.WinForm.AboutForm]
+@="ERPToolkit.WinForm.AboutForm"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.WinForm.AboutForm\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000019}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000019}]
+@="ERPToolkit.WinForm.AboutForm"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000019}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.WinForm.AboutForm"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000019}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.WinForm.AboutForm"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000019}\ProgId]
+@="ERPToolkit.WinForm.AboutForm"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000019}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.WinForm.CreditsForm]
+@="ERPToolkit.WinForm.CreditsForm"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.WinForm.CreditsForm\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000020}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000020}]
+@="ERPToolkit.WinForm.CreditsForm"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000020}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.WinForm.CreditsForm"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000020}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.WinForm.CreditsForm"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000020}\ProgId]
+@="ERPToolkit.WinForm.CreditsForm"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000020}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Database]
+@="ERPToolkit.Class.Database"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Database\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000002}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000002}]
+@="ERPToolkit.Class.Database"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000002}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.Database"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000002}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.Database"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000002}\ProgId]
+@="ERPToolkit.Class.Database"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000002}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Font]
+@="ERPToolkit.Class.Font"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Font\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000004}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000004}]
+@="ERPToolkit.Class.Font"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000004}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.Font"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000004}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.Font"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000004}\ProgId]
+@="ERPToolkit.Class.Font"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000004}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.General]
+@="ERPToolkit.Class.General"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.General\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000005}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000005}]
+@="ERPToolkit.Class.General"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000005}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.General"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000005}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.General"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000005}\ProgId]
+@="ERPToolkit.Class.General"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000005}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Process]
+@="ERPToolkit.Class.Process"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Process\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000007}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000007}]
+@="ERPToolkit.Class.Process"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000007}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.Process"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000007}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.Process"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000007}\ProgId]
+@="ERPToolkit.Class.Process"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000007}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.WinForm.ProgressForm]
+@="ERPToolkit.WinForm.ProgressForm"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.WinForm.ProgressForm\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000024}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000024}]
+@="ERPToolkit.WinForm.ProgressForm"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000024}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.WinForm.ProgressForm"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000024}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.WinForm.ProgressForm"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000024}\ProgId]
+@="ERPToolkit.WinForm.ProgressForm"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000024}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.SysRegistry]
+@="ERPToolkit.Class.SysRegistry"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.SysRegistry\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000015}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000015}]
+@="ERPToolkit.Class.SysRegistry"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000015}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.SysRegistry"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000015}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.SysRegistry"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000015}\ProgId]
+@="ERPToolkit.Class.SysRegistry"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000015}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Server]
+@="ERPToolkit.Class.Server"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Server\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000010}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000010}]
+@="ERPToolkit.Class.Server"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000010}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.Server"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000010}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.Server"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000010}\ProgId]
+@="ERPToolkit.Class.Server"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000010}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Shortcut]
+@="ERPToolkit.Class.Shortcut"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Shortcut\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000011}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000011}]
+@="ERPToolkit.Class.Shortcut"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000011}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.Shortcut"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000011}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.Shortcut"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000011}\ProgId]
+@="ERPToolkit.Class.Shortcut"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000011}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.SysEnvironment]
+@="ERPToolkit.Class.SysEnvironment"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.SysEnvironment\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000013}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000013}]
+@="ERPToolkit.Class.SysEnvironment"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000013}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.SysEnvironment"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000013}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.SysEnvironment"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000013}\ProgId]
+@="ERPToolkit.Class.SysEnvironment"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000013}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.WinForm.ExceptionForm]
+@="ERPToolkit.App.WinForm.ExceptionForm"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.WinForm.ExceptionForm\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000021}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000021}]
+@="ERPToolkit.App.WinForm.ExceptionForm"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000021}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.App.WinForm.ExceptionForm"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000021}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.App.WinForm.ExceptionForm"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000021}\ProgId]
+@="ERPToolkit.App.WinForm.ExceptionForm"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000021}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.Class.ExceptionHandler]
+@="ERPToolkit.App.Class.ExceptionHandler"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.Class.ExceptionHandler\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000003}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000003}]
+@="ERPToolkit.App.Class.ExceptionHandler"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000003}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.App.Class.ExceptionHandler"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000003}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.App.Class.ExceptionHandler"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000003}\ProgId]
+@="ERPToolkit.App.Class.ExceptionHandler"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000003}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.WinForm.LicenseForm]
+@="ERPToolkit.WinForm.LicenseForm"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.WinForm.LicenseForm\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000023}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000023}]
+@="ERPToolkit.WinForm.LicenseForm"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000023}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.WinForm.LicenseForm"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000023}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.WinForm.LicenseForm"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000023}\ProgId]
+@="ERPToolkit.WinForm.LicenseForm"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000023}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Odbc]
+@="ERPToolkit.Class.Odbc"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Odbc\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000006}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000006}]
+@="ERPToolkit.Class.Odbc"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000006}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.Odbc"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000006}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.Odbc"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000006}\ProgId]
+@="ERPToolkit.Class.Odbc"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000006}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Email]
+@="ERPToolkit.Class.Email"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Email\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000009}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000009}]
+@="ERPToolkit.Class.Email"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000009}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.Email"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000009}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.Email"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000009}\ProgId]
+@="ERPToolkit.Class.Email"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000009}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.Class.StoreValues]
+@="ERPToolkit.App.Class.StoreValues"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.App.Class.StoreValues\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000012}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000012}]
+@="ERPToolkit.App.Class.StoreValues"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000012}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.App.Class.StoreValues"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000012}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.App.Class.StoreValues"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000012}\ProgId]
+@="ERPToolkit.App.Class.StoreValues"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000012}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.SysIo]
+@="ERPToolkit.Class.SysIo"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.SysIo\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000014}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000014}]
+@="ERPToolkit.Class.SysIo"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000014}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.SysIo"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000014}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.SysIo"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000014}\ProgId]
+@="ERPToolkit.Class.SysIo"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000014}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Uac]
+@="ERPToolkit.Class.Uac"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Uac\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000016}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000016}]
+@="ERPToolkit.Class.Uac"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000016}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.Uac"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000016}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.Uac"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000016}\ProgId]
+@="ERPToolkit.Class.Uac"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000016}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.UdlFile]
+@="ERPToolkit.Class.UdlFile"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.UdlFile\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000017}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000017}]
+@="ERPToolkit.Class.UdlFile"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000017}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.UdlFile"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000017}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.UdlFile"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000017}\ProgId]
+@="ERPToolkit.Class.UdlFile"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000017}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Xml]
+@="ERPToolkit.Class.Xml"
+
+[HKEY_CLASSES_ROOT\ERPToolkit.Class.Xml\CLSID]
+@="{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000018}"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000018}]
+@="ERPToolkit.Class.Xml"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000018}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="ERPToolkit.Class.Xml"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000018}\InprocServer32\1.0.0.0]
+"Class"="ERPToolkit.Class.Xml"
+"Assembly"="ERPToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="file:///C:/Users/Vinicius M. Freitas/Source/Workspaces/ERPToolkit/ERPToolkit/bin/Debug/ERPToolkit.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000018}\ProgId]
+@="ERPToolkit.Class.Xml"
+
+[HKEY_CLASSES_ROOT\CLSID\{4AF5B21C-CC04-4BEB-AE3F-DEF3E0000018}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]

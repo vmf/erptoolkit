@@ -1,0 +1,28 @@
+﻿			ERPToolkit source tree
+
+The ERPToolkit source tree is quite simple.
+
+\App - Classes which goals is to control the ERPToolkit or get some information like:
+  ExceptionHandler: It's called when an exception accurs.
+  MethodInformation: Gives method informations about a specific class.
+
+\Class - ERPToolkit classes that do the work for us.
+
+\Component - All ERPToolkit components.
+
+\Documentation - All ERPToolkit documentation.
+
+\FontReg - Small .exe files that installs windows's fonts for us.
+
+\Info - ERPToolkit information for development like the last GUID used.
+
+\Lang - Language resources which are used in win forms.
+
+\Resources - All ERPToolkit resources(Resources used in winforms and components) like images.
+
+\Test - Classes for testing the ERPToolkit.
+
+\VbScript - How to work with ERPToolkit through vbscript. Thus all methods are implemented and
+  explained as well.
+
+\WinForm - All winforms that do all the work for us.
