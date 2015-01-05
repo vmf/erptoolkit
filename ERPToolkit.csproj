@@ -55,12 +55,13 @@
     <Compile Include="Class\Constants.cs" />
     <Compile Include="App\Class\VisualStyles.cs" />
     <Compile Include="Class\ScriptRefactor.cs" />
-    <Compile Include="Lang\res_es_es.Designer.cs">
+    <Compile Include="Class\Xml.cs" />
+    <Compile Include="Resources\Lang\res_es_es.Designer.cs">
       <DependentUpon>res_es_es.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Lang\res_pt_br.Designer.cs">
+    <Compile Include="Resources\Lang\res_pt_br.Designer.cs">
       <DependentUpon>res_pt_br.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,7 +81,7 @@
     </Compile>
     <Compile Include="Class\Database.cs" />
     <Compile Include="Class\Font.cs" />
-    <Compile Include="Lang\res_en_us.Designer.cs">
+    <Compile Include="Resources\Lang\res_en_us.Designer.cs">
       <DependentUpon>res_en_us.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,12 +124,12 @@
     </Compile>
     <Compile Include="Class\Uac.cs" />
     <Compile Include="Class\UdlFile.cs" />
-    <EmbeddedResource Include="Lang\res_es_es.resx">
+    <EmbeddedResource Include="Resources\Lang\res_es_es.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>res_es_es.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lang\res_pt_br.resx">
+    <EmbeddedResource Include="Resources\Lang\res_pt_br.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>res_pt_br.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
@@ -142,7 +143,7 @@
     <EmbeddedResource Include="App\WinForm\ExceptionForm.resx">
       <DependentUpon>ExceptionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lang\res_en_us.resx">
+    <EmbeddedResource Include="Resources\Lang\res_en_us.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>res_en_us.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
@@ -153,6 +154,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WinForm\ProgressForm.resx">
       <DependentUpon>ProgressForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -182,10 +184,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="register.bat" />
-    <None Include="Resources\en_us_24.png" />
+    <None Include="Resources\Image\en_us_24.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pt_br_24.png" />
+    <None Include="Resources\Image\pt_br_24.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="IWshRuntimeLibrary">
@@ -208,27 +210,20 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\info_32.png" />
+    <EmbeddedResource Include="Resources\FontReg\FontReg_x86-32.exe" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FontReg\FontReg_x86-32.exe" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="FontReg\FontReg_x86-64.exe" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\down_20.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\right_20.png" />
+    <EmbeddedResource Include="Resources\FontReg\FontReg_x86-64.exe" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="CREDITS.txt" />
     <Content Include="Documentation\SOURCE-TREE.txt" />
     <Content Include="Info\App.txt" />
     <Content Include="README.txt" />
+    <Content Include="Resources\Keyword\Language\vbscript.xml" />
     <Content Include="VbScript\App\Class\MethodInformation.vbs" />
     <Content Include="VbScript\App\Class\Resource.vbs" />
+    <Content Include="VbScript\Class\Xml.vbs" />
     <Content Include="VbScript\WinForm\ProgressForm.vbs" />
     <Content Include="VbScript\Class\Database.vbs" />
     <Content Include="VbScript\Class\Font.vbs" />

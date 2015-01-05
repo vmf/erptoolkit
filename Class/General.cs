@@ -1,6 +1,7 @@
 ﻿/*
  * General.cs - This file is part of ERPToolkit
  * Copyright (C) 2014  Vinícius M. Freitas
+ * Copyright (C) 2015  Vinícius M. Freitas
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -202,6 +203,34 @@ namespace ERPToolkit.Class
             return -1;
         }
 
+        /// <summary>
+        ///     Gets the number of a char while the substring contains the char
+        /// </summary>
+        /// <param name="str">String</param>
+        /// <param name="ch">Char that we want to find</param>
+        /// <param name="since">The start number of the index of the loop</param>
+        /// <returns></returns>
+        private int GetNumberWhileChar(string str, string ch, int since = 0)
+        {
+            try
+            {
+                var nWhileChar = 0;
+                for (var index = since; index < str.Length; index++)
+                {
+                    if (str.Substring(index, 1).Equals(ch))
+                        nWhileChar++;
+                }
+                return nWhileChar;
+            }
+            catch (Exception exception)
+            {
+                var initEx = new ExceptionHandler();
+                initEx.Values = Values;
+                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
+            }
+            return -1;
+        }
+
         #endregion
 
         #region Get
@@ -319,8 +348,15 @@ namespace ERPToolkit.Class
             var list = new List<string>();
             try
             {
-                if (str != null)
+                if (!string.IsNullOrEmpty(str))
                 {
+                    /* Check if the last character of the string has the separator in the end. If not,
+                     * the separator will be inserted in the end of the string. We need this
+                     * because the last tag is not considered if it hasn't the separator, thus,
+                     * if it's not specified, will be included anyway.
+                    */
+                    str = str.Substring(str.Length - 1, 1).Equals(separator) ? str : str + separator;
+
                     var strItem = "";
                     for (var i = 0; i < str.Length; i++)
                     {
@@ -475,6 +511,101 @@ namespace ERPToolkit.Class
                 initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
             }
 
+            return null;
+        }
+
+        /// <summary>
+        ///     Replaces a text
+        /// </summary>
+        /// <param name="str">Text</param>
+        /// <param name="findWhat">What we want to find</param>
+        /// <param name="replaceWith">What we want to replace(if we find)</param>
+        /// <param name="matchCase">The text will be found using match case ?</param>
+        /// <returns>Replaced text(if found)</returns>
+        public string Replace(string str, string findWhat, string replaceWith, bool matchCase)
+        {
+            try
+            {
+                var strCummulative = "";
+
+                if (!string.IsNullOrEmpty(str))
+                {
+                    for (var index = 0; index < str.Length; index++)
+                    {
+                        if (matchCase)
+                        {
+                            /* Check if it has enough length to compare. if so, it'll compare.
+                             * if not it won't need to compare because if it hasn't enough length
+                             * means that it's not the text because the left length
+                             * is less than the length of the text we are looking for.
+                             */
+                            if (index <= (str.Length - findWhat.Length))
+                            {
+                                /* Check if it is the text we are looking for */
+                                if (str.Substring(index, findWhat.Length).Equals(findWhat))
+                                {
+                                    /* It gets the new text and then increments the index
+                                     * with the findWhat length because once find the findWhat
+                                     * we won't need to compare anything. Then, it adds the current substring
+                                     * (substring after the increment of the index) if there are more text.
+                                     */
+                                    strCummulative += replaceWith;
+                                    index += findWhat.Length;
+
+                                    /* Does not get the next substring if                                      
+                                     * there is no text anymore 
+                                     */
+                                    if (index < str.Length)
+                                        strCummulative += str.Substring(index, 1);
+                                }
+                                else
+                                    strCummulative += str.Substring(index, 1);
+                            }
+                            else
+                                strCummulative += str.Substring(index, 1);
+                        }
+                        else
+                        {
+                            /* Check if it has enough length to compare. if so, it'll compare.
+                             * if not it won't need to compare because if it hasn't enough length
+                             * means that it's not the text because the left length
+                             * is less than the length of the text we are looking for.
+                             */
+                            if (index <= (str.Length - findWhat.Length))
+                            {
+                                /* Check if it is the text we are looking for */
+                                if (str.ToLower().Substring(index, findWhat.Length).Equals(findWhat.ToLower()))
+                                {
+                                    /* It gets the new text and then increments the index
+                                     * with the findWhat length because once find the findWhat
+                                     * we won't need to compare anything. Then, it adds the current substring
+                                     * (substring after the increment of the index) if there are more text.
+                                     */
+                                    strCummulative += replaceWith;
+                                    index += findWhat.Length;
+
+                                    /* Does not get the next substring if                                      
+                                     * there is no text anymore 
+                                     */
+                                    if (index < str.Length)
+                                        strCummulative += str.Substring(index, 1);
+                                }
+                                else
+                                    strCummulative += str.Substring(index, 1);
+                            }
+                            else
+                                strCummulative += str.Substring(index, 1);
+                        }
+                    }
+                }
+                return strCummulative;
+            }
+            catch (Exception exception)
+            {
+                var initEx = new ExceptionHandler();
+                initEx.Values = Values;
+                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
+            }
             return null;
         }
 

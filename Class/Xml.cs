@@ -1,6 +1,5 @@
 ﻿/*
- * Shortcut.cs - This file is part of ERPToolkit
- * Copyright (C) 2014  Vinícius M. Freitas
+ * Xml.cs - This file is part of ERPToolkit
  * Copyright (C) 2015  Vinícius M. Freitas
  * 
  * This program is free software; you can redistribute it and/or
@@ -19,45 +18,53 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Xml.Linq;
 using ERPToolkit.App.Class;
-using IWshRuntimeLibrary;
 
 namespace ERPToolkit.Class
 {
     // This is for COM Interop.
-    [Guid("4af5b21c-cc04-4beb-ae3f-def3e0000011")]
+    [Guid("4af5b21c-cc04-4beb-ae3f-def3e0000018")]
     [ComVisible(true)]
-    public class Shortcut
+    public class Xml
     {
         /* Values: The ERPToolkit's way to pass values through classes */
         public StoreValues Values { get; set; }
 
-        #region Create
-
         /// <summary>
-        ///     Creates shortcut
+        ///     Gets a generic List<string> from an xml file.
         /// </summary>
-        /// <param name="shortcutName">Shortcut name</param>
-        /// <param name="shortcutPath">Shortcut path</param>
-        /// <param name="targetFileLocation">Target file location - path of the file that will launch when the shortcut is run</param>
-        public void Create(string shortcutName, string shortcutPath, string targetFileLocation)
+        /// <param name="xmlPath">Path to the xml file</param>
+        /// <param name="node">The descendants that we're going to get</param>
+        /// <returns></returns>
+        public List<string> GetListFromXml(string xmlPath, string node)
         {
-            var general = new General();
             try
             {
-                var shortcutLocation = Path.Combine(shortcutPath, shortcutName + ".lnk");
-                var shell = new WshShell();
-                var shortcut = (IWshShortcut) shell.CreateShortcut(shortcutLocation);
+                var list = new List<string>();
 
-                shortcut.Description = shortcutName; // The description of the shortcut
-                //shortcut.IconLocation = @"c:\myicon.ico";         // The icon of the shortcut
-                shortcut.TargetPath = targetFileLocation;
-                // The path of the file that will launch when the shortcut is run
-                shortcut.WorkingDirectory = general.GetWorkingDirectory(targetFileLocation); // The path start in    
-                shortcut.Save(); // Save the shortcut           
+                /* Loads the xml file */
+                var doc = XDocument.Load(xmlPath);
+
+                if (!string.IsNullOrEmpty(xmlPath))
+                {
+                    if (File.Exists(xmlPath))
+                    {
+                        /* For each value that we're getting,
+                         * it's been added to the generic List<string>
+                         */
+                        foreach (var myNode in doc.Descendants(node))
+                        {
+                            list.Add(myNode.Value);
+                        }
+                    }
+                }
+
+                return list;
             }
             catch (Exception exception)
             {
@@ -65,8 +72,7 @@ namespace ERPToolkit.Class
                 initEx.Values = Values;
                 initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
             }
+            return null;
         }
-
-        #endregion
     }
 }

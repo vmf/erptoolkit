@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ERPToolkit.Lang {
+namespace ERPToolkit.Resources.Lang {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ERPToolkit.Lang {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class res_pt_br {
+    internal class res_es_es {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal res_pt_br() {
+        internal res_es_es() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ERPToolkit.Lang {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ERPToolkit.Lang.res_pt_br", typeof(res_pt_br).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ERPToolkit.Resources.Lang.res_es_es", typeof(res_es_es).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sobre.
+        ///   Looks up a localized string similar to Acerca de.
         /// </summary>
         internal static string about {
             get {
@@ -70,7 +70,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Informações Adicionais.
+        ///   Looks up a localized string similar to Información Adicional.
         /// </summary>
         internal static string aditionalInfo {
             get {
@@ -79,7 +79,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Trabalho artístico por.
+        ///   Looks up a localized string similar to Ilustraciones de.
         /// </summary>
         internal static string artworkBy {
             get {
@@ -106,7 +106,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fechar.
+        ///   Looks up a localized string similar to Cerca.
         /// </summary>
         internal static string close {
             get {
@@ -151,7 +151,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email enviado! A exceção será analisada o mais rápido possível.
+        ///   Looks up a localized string similar to Email enviado!  La excepción se analizará lo antes posible.
         /// </summary>
         internal static string emailSent {
             get {
@@ -179,7 +179,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exceção.
+        ///   Looks up a localized string similar to Excepción.
         /// </summary>
         internal static string exception {
             get {
@@ -188,7 +188,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Origem da exceção.
+        ///   Looks up a localized string similar to Excepción Desde.
         /// </summary>
         internal static string exceptionFrom {
             get {
@@ -197,7 +197,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mensagem da exceção.
+        ///   Looks up a localized string similar to Mensaje de Excepción.
         /// </summary>
         internal static string exceptionMessage {
             get {
@@ -206,7 +206,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Type da exceção.
+        ///   Looks up a localized string similar to Tipo de Excepción.
         /// </summary>
         internal static string exceptionType {
             get {
@@ -215,7 +215,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Licença.
+        ///   Looks up a localized string similar to Licencia.
         /// </summary>
         internal static string license {
             get {
@@ -251,7 +251,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clicando em &apos;Enviar&apos;, automaticamente envia para o desenvolvedor a exceção, causando rápida resolução..
+        ///   Looks up a localized string similar to Al hacer clic en &apos;Enviar&apos;, automáticamente enviará al desarrollador la excepción, causando una rápida resolución..
         /// </summary>
         internal static string sendEmailInfo {
             get {
@@ -260,7 +260,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enviar para.
+        ///   Looks up a localized string similar to Enviar a.
         /// </summary>
         internal static string sendTo {
             get {
@@ -269,7 +269,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Você tem certeza de que deseja cancelar ?.
+        ///   Looks up a localized string similar to ¿Seguro que desea cancelar?.
         /// </summary>
         internal static string wantToCancel {
             get {
@@ -278,7 +278,7 @@ namespace ERPToolkit.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Atenção.
+        ///   Looks up a localized string similar to Advertencia.
         /// </summary>
         internal static string warning {
             get {

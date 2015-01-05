@@ -1,6 +1,7 @@
 ﻿/*
  * Constants.cs - This file is part of ERPToolkit
  * Copyright (C) 2014  Vinícius M. Freitas
+ * Copyright (C) 2015  Vinícius M. Freitas
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -40,12 +41,13 @@ namespace ERPToolkit.Class
 
         #region ScriptRefactor
 
-        public readonly string MyPrivate = "private";
-        public readonly string MyPublic = "public";
-        public readonly string MyFunction = "function";
-        public readonly string MySub = "sub";
-        public readonly string MyByVal = "byval";
-        public readonly string MyByRef = "byref";
+        public readonly string PrivateKeyword = "Private";
+        public readonly string PublicKeyword = "Public";
+        public readonly string FunctionKeyword = "Function";
+        public readonly string SubKeyword = "Sub";
+        public readonly string ByValKeyword = "ByVal";
+        public readonly string ByRefKeyword = "ByRef";
+        public readonly string EndKeyword = "End";
 
         #endregion
 

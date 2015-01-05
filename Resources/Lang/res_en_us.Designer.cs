@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ERPToolkit.Lang {
+namespace ERPToolkit.Resources.Lang {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ERPToolkit.Lang {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ERPToolkit.Lang.res_en_us", typeof(res_en_us).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ERPToolkit.Resources.Lang.res_en_us", typeof(res_en_us).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

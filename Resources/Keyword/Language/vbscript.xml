@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+
+<erptoolkit>
+  <keywords>
+    <keyword-name>Explicit</keyword-name>
+    <keyword-name>Option</keyword-name>
+    <keyword-name>Abs</keyword-name>
+    <keyword-name>adModeRead</keyword-name>
+    <keyword-name>adModeReadWrite</keyword-name>
+    <keyword-name>ADODB.Connection</keyword-name>
+    <keyword-name>ADODB.Recordset</keyword-name>
+    <keyword-name>adOpenDynamic</keyword-name>
+    <keyword-name>adOpenForwardOnly</keyword-name>
+    <keyword-name>adOpenKeyset</keyword-name>
+    <keyword-name>adOpenStatic</keyword-name>
+    <keyword-name>ALL_RAW</keyword-name>
+    <keyword-name>And</keyword-name>
+    <keyword-name>Application</keyword-name>
+    <keyword-name>Application.Lock</keyword-name>
+    <keyword-name>Application.Unlock</keyword-name>
+    <keyword-name>APPL_MD_PATH</keyword-name>
+    <keyword-name>APPL_PHYSICAL_PATH</keyword-name>
+    <keyword-name>Archive</keyword-name>
+    <keyword-name>Array</keyword-name>
+    <keyword-name>Asc</keyword-name>
+    <keyword-name>AscB</keyword-name>
+    <keyword-name>AscW</keyword-name>
+    <keyword-name>ASP_LICENSE</keyword-name>
+    <keyword-name>ASP_OS</keyword-name>
+    <keyword-name>ASP_VERSION</keyword-name>
+    <keyword-name>ASP_VERSION_MAJOR</keyword-name>
+    <keyword-name>ASP_VERSION_MINOR</keyword-name>
+    <keyword-name>Atn</keyword-name>
+    <keyword-name>AUTH_PASSWORD</keyword-name>
+    <keyword-name>AUTH_TYPE</keyword-name>
+    <keyword-name>AUTH_USER</keyword-name>
+    <keyword-name>ByRef</keyword-name>
+    <keyword-name>ByVal</keyword-name>
+    <keyword-name>Call</keyword-name>
+    <keyword-name>Case</keyword-name>
+    <keyword-name>CBool</keyword-name>
+    <keyword-name>CByte</keyword-name>
+    <keyword-name>CCur</keyword-name>
+    <keyword-name>CDate</keyword-name>
+    <keyword-name>CDbl</keyword-name>
+    <keyword-name>CERT_COOKIE</keyword-name>
+    <keyword-name>CERT_FLAGS</keyword-name>
+    <keyword-name>CERT_ISSUER</keyword-name>
+    <keyword-name>CERT_KEYSIZE</keyword-name>
+    <keyword-name>CERT_SECRETKEYSIZE</keyword-name>
+    <keyword-name>CERT_SERIALNUMBER</keyword-name>
+    <keyword-name>CERT_SERVER_ISSUER</keyword-name>
+    <keyword-name>CERT_SERVER_SUBJECT</keyword-name>
+    <keyword-name>CERT_SUBJECT</keyword-name>
+    <keyword-name>Chr</keyword-name>
+    <keyword-name>ChrB</keyword-name>
+    <keyword-name>ChrW</keyword-name>
+    <keyword-name>CInt</keyword-name>
+    <keyword-name>Class</keyword-name>
+    <keyword-name>CLng</keyword-name>
+    <keyword-name>CONTENT_LENGTH</keyword-name>
+    <keyword-name>CONTENT_TYPE</keyword-name>
+    <keyword-name>Cos</keyword-name>
+    <keyword-name>Count</keyword-name>
+    <keyword-name>CreateObject</keyword-name>
+    <keyword-name>CSng</keyword-name>
+    <keyword-name>CStr</keyword-name>
+    <keyword-name>Date</keyword-name>
+    <keyword-name>DateAdd</keyword-name>
+    <keyword-name>DateDiff</keyword-name>
+    <keyword-name>DatePart</keyword-name>
+    <keyword-name>DateSerial</keyword-name>
+    <keyword-name>DateValue</keyword-name>
+    <keyword-name>Day</keyword-name>
+    <keyword-name>Dict.Add</keyword-name>
+    <keyword-name>Dict.CompareMode</keyword-name>
+    <keyword-name>Dict.Const</keyword-name>
+    <keyword-name>Dict.Exists</keyword-name>
+    <keyword-name>Dict.Item</keyword-name>
+    <keyword-name>Dict.Items</keyword-name>
+    <keyword-name>Dict.Key</keyword-name>
+    <keyword-name>Dict.Keys</keyword-name>
+    <keyword-name>Dict.Remove</keyword-name>
+    <keyword-name>Dict.RemoveAll</keyword-name>
+    <keyword-name>Dim</keyword-name>
+    <keyword-name>Directory</keyword-name>
+    <keyword-name>Do Until</keyword-name>
+    <keyword-name>Do While</keyword-name>
+    <keyword-name>Do</keyword-name>
+    <keyword-name>Drive.AvailableSpace</keyword-name>
+    <keyword-name>Drive.DriveLetter</keyword-name>
+    <keyword-name>Drive.DriveType</keyword-name>
+    <keyword-name>Drive.FileSystem</keyword-name>
+    <keyword-name>Drive.FreeSpace</keyword-name>
+    <keyword-name>Drive.IsReady</keyword-name>
+    <keyword-name>Drive.Path</keyword-name>
+    <keyword-name>Drive.RootFolder</keyword-name>
+    <keyword-name>Drive.SerialNumber</keyword-name>
+    <keyword-name>Drive.ShareName</keyword-name>
+    <keyword-name>Drive.TotalSize</keyword-name>
+    <keyword-name>Drive.VolumeName</keyword-name>
+    <keyword-name>Drives.Count</keyword-name>
+    <keyword-name>Drives.Item</keyword-name>
+    <keyword-name>Else</keyword-name>
+    <keyword-name>End Class</keyword-name>
+    <keyword-name>End Function</keyword-name>
+    <keyword-name>End If</keyword-name>
+    <keyword-name>End Property</keyword-name>
+    <keyword-name>End Select</keyword-name>
+    <keyword-name>End Sub</keyword-name>
+    <keyword-name>End Type</keyword-name>
+    <keyword-name>End With</keyword-name>
+    <keyword-name>Eqv</keyword-name>
+    <keyword-name>Erase</keyword-name>
+    <keyword-name>Err</keyword-name>
+    <keyword-name>Err.Clear</keyword-name>
+    <keyword-name>Err.Description</keyword-name>
+    <keyword-name>Err.HelpContect</keyword-name>
+    <keyword-name>Err.HelpFile</keyword-name>
+    <keyword-name>Err.Number</keyword-name>
+    <keyword-name>Err.Raise</keyword-name>
+    <keyword-name>Err.Source</keyword-name>
+    <keyword-name>Eval</keyword-name>
+    <keyword-name>Excel.Application</keyword-name>
+    <keyword-name>Execute</keyword-name>
+    <keyword-name>ExecuteGlobal</keyword-name>
+    <keyword-name>Exit Do</keyword-name>
+    <keyword-name>Exit For</keyword-name>
+    <keyword-name>Exit Function</keyword-name>
+    <keyword-name>Exit Property</keyword-name>
+    <keyword-name>Exit Sub</keyword-name>
+    <keyword-name>Exp</keyword-name>
+    <keyword-name>False</keyword-name>
+    <keyword-name>File.Attributes</keyword-name>
+    <keyword-name>File.Copy</keyword-name>
+    <keyword-name>File.DateCreated</keyword-name>
+    <keyword-name>File.DateLastAccessed</keyword-name>
+    <keyword-name>File.DateLastModified</keyword-name>
+    <keyword-name>File.Delete</keyword-name>
+    <keyword-name>File.Drive</keyword-name>
+    <keyword-name>File.Move</keyword-name>
+    <keyword-name>File.Name</keyword-name>
+    <keyword-name>File.OpenAsTextStream</keyword-name>
+    <keyword-name>File.ParentFolder</keyword-name>
+    <keyword-name>File.Path</keyword-name>
+    <keyword-name>File.ShortName</keyword-name>
+    <keyword-name>File.ShortPath</keyword-name>
+    <keyword-name>File.Size</keyword-name>
+    <keyword-name>File.Type</keyword-name>
+    <keyword-name>Files.Count</keyword-name>
+    <keyword-name>Files.Item</keyword-name>
+    <keyword-name>FileSystemObject.BuildPath</keyword-name>
+    <keyword-name>FileSystemObject.CopyFile</keyword-name>
+    <keyword-name>FileSystemObject.CopyFolder</keyword-name>
+    <keyword-name>FileSystemObject.CreateFolder</keyword-name>
+    <keyword-name>FileSystemObject.CreateTextFile</keyword-name>
+    <keyword-name>FileSystemObject.DeleteFile</keyword-name>
+    <keyword-name>FileSystemObject.DeleteFolder</keyword-name>
+    <keyword-name>FileSystemObject.DriveExists</keyword-name>
+    <keyword-name>FileSystemObject.FileExists</keyword-name>
+    <keyword-name>FileSystemObject.FolderExists</keyword-name>
+    <keyword-name>FileSystemObject.GetAbsolutePathName</keyword-name>
+    <keyword-name>FileSystemObject.GetBaseName</keyword-name>
+    <keyword-name>FileSystemObject.GetDrive</keyword-name>
+    <keyword-name>FileSystemObject.GetDriveName</keyword-name>
+    <keyword-name>FileSystemObject.GetExtensionName</keyword-name>
+    <keyword-name>FileSystemObject.GetFile</keyword-name>
+    <keyword-name>FileSystemObject.GetFileName</keyword-name>
+    <keyword-name>FileSystemObject.GetFolder</keyword-name>
+    <keyword-name>FileSystemObject.GetParentFolderName</keyword-name>
+    <keyword-name>FileSystemObject.GetSpecialFolder</keyword-name>
+    <keyword-name>FileSystemObject.GetStandardStream</keyword-name>
+    <keyword-name>FileSystemObject.GetTempName</keyword-name>
+    <keyword-name>FileSystemObject.MoveFile</keyword-name>
+    <keyword-name>FileSystemObject.MoveFolder</keyword-name>
+    <keyword-name>FileSystemObject.OpenTextFile</keyword-name>
+    <keyword-name>Filter</keyword-name>
+    <keyword-name>Fix</keyword-name>
+    <keyword-name>Folder.Copy</keyword-name>
+    <keyword-name>Folder.CreateTextFile</keyword-name>
+    <keyword-name>Folder.DateCreated</keyword-name>
+    <keyword-name>Folder.DateLastAccessed</keyword-name>
+    <keyword-name>Folder.DateLastModified</keyword-name>
+    <keyword-name>Folder.Delete</keyword-name>
+    <keyword-name>Folder.Drive</keyword-name>
+    <keyword-name>Folder.Files</keyword-name>
+    <keyword-name>Folder.IsRootFolder</keyword-name>
+    <keyword-name>Folder.Name</keyword-name>
+    <keyword-name>Folder.ParentFolder</keyword-name>
+    <keyword-name>Folder.Path</keyword-name>
+    <keyword-name>Folder.ShortName</keyword-name>
+    <keyword-name>Folder.ShortPath</keyword-name>
+    <keyword-name>Folder.Size</keyword-name>
+    <keyword-name>Folder.SubFolders</keyword-name>
+    <keyword-name>Folder.Type</keyword-name>
+    <keyword-name>Folders.Add</keyword-name>
+    <keyword-name>Folders.Count</keyword-name>
+    <keyword-name>Folders.Item</keyword-name>
+    <keyword-name>For () = () To () Step ()</keyword-name>
+    <keyword-name>For () = () To ()</keyword-name>
+    <keyword-name>For Each () In ()</keyword-name>
+    <keyword-name>For</keyword-name>
+    <keyword-name>ForAppending</keyword-name>
+    <keyword-name>FormatCurrency</keyword-name>
+    <keyword-name>FormatDateTime</keyword-name>
+    <keyword-name>FormatNumber</keyword-name>
+    <keyword-name>FormatPercent</keyword-name>
+    <keyword-name>ForWriting</keyword-name>
+    <keyword-name>Function</keyword-name>
+    <keyword-name>GATEWAY_INTERFACE</keyword-name>
+    <keyword-name>GetLocale</keyword-name>
+    <keyword-name>GetObject</keyword-name>
+    <keyword-name>GetRef</keyword-name>
+    <keyword-name>Hex</keyword-name>
+    <keyword-name>Hidden</keyword-name>
+    <keyword-name>Hour</keyword-name>
+    <keyword-name>http.responseText</keyword-name>
+    <keyword-name>http.send</keyword-name>
+    <keyword-name>http.setRequestHeader</keyword-name>
+    <keyword-name>HTTPS</keyword-name>
+    <keyword-name>HTTPS_KEYSIZE</keyword-name>
+    <keyword-name>HTTPS_SECRET_KEYSIZE</keyword-name>
+    <keyword-name>HTTPS_SERVER_ISSUER</keyword-name>
+    <keyword-name>HTTPS_SERVER_SUBJECT</keyword-name>
+    <keyword-name>If Then Else</keyword-name>
+    <keyword-name>If Then</keyword-name>
+    <keyword-name>If</keyword-name>
+    <keyword-name>Imp</keyword-name>
+    <keyword-name>InputBox</keyword-name>
+    <keyword-name>INSTANCE_ID</keyword-name>
+    <keyword-name>INSTANCE_META_PATH</keyword-name>
+    <keyword-name>InStr</keyword-name>
+    <keyword-name>InstrB</keyword-name>
+    <keyword-name>InstrRev</keyword-name>
+    <keyword-name>Int</keyword-name>
+    <keyword-name>Is</keyword-name>
+    <keyword-name>IsArray</keyword-name>
+    <keyword-name>IsDate</keyword-name>
+    <keyword-name>IsEmpty</keyword-name>
+    <keyword-name>IsNull</keyword-name>
+    <keyword-name>IsNumeric</keyword-name>
+    <keyword-name>IsObject</keyword-name>
+    <keyword-name>Join</keyword-name>
+    <keyword-name>LBound</keyword-name>
+    <keyword-name>LCase</keyword-name>
+    <keyword-name>Left</keyword-name>
+    <keyword-name>LeftB</keyword-name>
+    <keyword-name>Len</keyword-name>
+    <keyword-name>LenB</keyword-name>
+    <keyword-name>LoadPicture</keyword-name>
+    <keyword-name>LOCAL_ADDR</keyword-name>
+    <keyword-name>LOGON_USERLog</keyword-name>
+    <keyword-name>Loop Until</keyword-name>
+    <keyword-name>Loop While</keyword-name>
+    <keyword-name>Loop</keyword-name>
+    <keyword-name>LTrim</keyword-name>
+    <keyword-name>MAPI.Session</keyword-name>
+    <keyword-name>Matches.Count</keyword-name>
+    <keyword-name>Matches.Item</keyword-name>
+    <keyword-name>Mid</keyword-name>
+    <keyword-name>MidB</keyword-name>
+    <keyword-name>Minute</keyword-name>
+    <keyword-name>Mod</keyword-name>
+    <keyword-name>Month</keyword-name>
+    <keyword-name>MonthName</keyword-name>
+    <keyword-name>MsgBox</keyword-name>
+    <keyword-name>Next</keyword-name>
+    <keyword-name>Not</keyword-name>
+    <keyword-name>Nothing</keyword-name>
+    <keyword-name>Now</keyword-name>
+    <keyword-name>Oct</keyword-name>
+    <keyword-name>On Error Goto 0</keyword-name>
+    <keyword-name>On Error Resume Next</keyword-name>
+    <keyword-name>On Error</keyword-name>
+    <keyword-name>Option Explicit</keyword-name>
+    <keyword-name>Or</keyword-name>
+    <keyword-name>Outlook.Application</keyword-name>
+    <keyword-name>PATH_INFO</keyword-name>
+    <keyword-name>PATH_TRANSLATEDPrivate</keyword-name>
+    <keyword-name>Private Const</keyword-name>
+    <keyword-name>Private Function</keyword-name>
+    <keyword-name>Private Property Get</keyword-name>
+    <keyword-name>Private Property Let</keyword-name>
+    <keyword-name>Private Property Set</keyword-name>
+    <keyword-name>Private Sub Class_Terminate</keyword-name>
+    <keyword-name>Private Sub object_Initialize</keyword-name>
+    <keyword-name>Private Sub</keyword-name>
+    <keyword-name>Property Get</keyword-name>
+    <keyword-name>Property Let</keyword-name>
+    <keyword-name>Property Set</keyword-name>
+    <keyword-name>Public Const</keyword-name>
+    <keyword-name>Public Default Property Get</keyword-name>
+    <keyword-name>Public Default Property Let</keyword-name>
+    <keyword-name>Public Default Sub</keyword-name>
+    <keyword-name>Public Function</keyword-name>
+    <keyword-name>Public Property Get</keyword-name>
+    <keyword-name>Public Property Let</keyword-name>
+    <keyword-name>Public Property Set</keyword-name>
+    <keyword-name>Public Sub</keyword-name>
+    <keyword-name>Public</keyword-name>
+    <keyword-name>QUERY_STRING</keyword-name>
+    <keyword-name>Randomize</keyword-name>
+    <keyword-name>ReadOnly</keyword-name>
+    <keyword-name>Redim</keyword-name>
+    <keyword-name>RegExp.Execute</keyword-name>
+    <keyword-name>RegExp.Global</keyword-name>
+    <keyword-name>RegExp.IgnoreCase</keyword-name>
+    <keyword-name>RegExp.Pattern</keyword-name>
+    <keyword-name>RegExp.Replace</keyword-name>
+    <keyword-name>RegExp.Test</keyword-name>
+    <keyword-name>Rem</keyword-name>
+    <keyword-name>REMOTE_ADDR</keyword-name>
+    <keyword-name>REMOTE_HOST</keyword-name>
+    <keyword-name>REMOTE_USER</keyword-name>
+    <keyword-name>Replace</keyword-name>
+    <keyword-name>Request.BinaryRead</keyword-name>
+    <keyword-name>Request.Cookies</keyword-name>
+    <keyword-name>Request.Cookies(&quot;cookie&quot;).HasKeys</keyword-name>
+    <keyword-name>Request.Form</keyword-name>
+    <keyword-name>Request.Form(&quot;form&quot;).Count</keyword-name>
+    <keyword-name>Request.QueryString</keyword-name>
+    <keyword-name>Request.QueryString(&quot;id&quot;).Count</keyword-name>
+    <keyword-name>Request.ServerVariables</keyword-name>
+    <keyword-name>Request.TotalBytes</keyword-name>
+    <keyword-name>REQUEST_METHOD</keyword-name>
+    <keyword-name>Response.AddHeader</keyword-name>
+    <keyword-name>Response.AppendToLog</keyword-name>
+    <keyword-name>Response.BinaryWrite</keyword-name>
+    <keyword-name>Response.Buffer = True</keyword-name>
+    <keyword-name>Response.CacheControl</keyword-name>
+    <keyword-name>Response.Charset</keyword-name>
+    <keyword-name>Response.Clear</keyword-name>
+    <keyword-name>Response.ContentType</keyword-name>
+    <keyword-name>Response.Cookies(&quot;cookie&quot;).Expires</keyword-name>
+    <keyword-name>Response.Cookies(&quot;cookie&quot;).HasKeys</keyword-name>
+    <keyword-name>Response.Cookies(&quot;cookie&quot;).Path</keyword-name>
+    <keyword-name>Response.Cookies(&quot;cookie&quot;).Secure</keyword-name>
+    <keyword-name>Response.End</keyword-name>
+    <keyword-name>Response.Expires</keyword-name>
+    <keyword-name>Response.ExpiresAbsolute</keyword-name>
+    <keyword-name>Response.Flush</keyword-name>
+    <keyword-name>Response.IsClientConnected</keyword-name>
+    <keyword-name>Response.PICS</keyword-name>
+    <keyword-name>Response.Redirect</keyword-name>
+    <keyword-name>Response.Status</keyword-name>
+    <keyword-name>Response.Write</keyword-name>
+    <keyword-name>RGB</keyword-name>
+    <keyword-name>Right</keyword-name>
+    <keyword-name>RightB</keyword-name>
+    <keyword-name>Rnd</keyword-name>
+    <keyword-name>Round</keyword-name>
+    <keyword-name>RTrim</keyword-name>
+    <keyword-name>ScriptEngine</keyword-name>
+    <keyword-name>ScriptEngineBuildVersion</keyword-name>
+    <keyword-name>ScriptEngineMajorVersion</keyword-name>
+    <keyword-name>ScriptEngineMinorVersion</keyword-name>
+    <keyword-name>Scripting.Dictionary</keyword-name>
+    <keyword-name>Scripting.FileSystemObject</keyword-name>
+    <keyword-name>Scriptlet.TypeLib</keyword-name>
+    <keyword-name>SCRIPT_NAME</keyword-name>
+    <keyword-name>Second</keyword-name>
+    <keyword-name>Select Case</keyword-name>
+    <keyword-name>Server.CreateObject</keyword-name>
+    <keyword-name>Server.HTMLEncode</keyword-name>
+    <keyword-name>Server.MapPath</keyword-name>
+    <keyword-name>Server.ScriptTimeout</keyword-name>
+    <keyword-name>Server.URLEncode</keyword-name>
+    <keyword-name>SERVER_NAME</keyword-name>
+    <keyword-name>SERVER_PORT</keyword-name>
+    <keyword-name>SERVER_PORT_SECURE</keyword-name>
+    <keyword-name>SERVER_PROTOCOL</keyword-name>
+    <keyword-name>SERVER_SOFTWARE</keyword-name>
+    <keyword-name>Session</keyword-name>
+    <keyword-name>Session.Abandom</keyword-name>
+    <keyword-name>Session.Contents</keyword-name>
+    <keyword-name>Session.Contents.Remove</keyword-name>
+    <keyword-name>Session.LCID</keyword-name>
+    <keyword-name>Session.SessionID</keyword-name>
+    <keyword-name>Session.StaticObjects</keyword-name>
+    <keyword-name>Session.Timeout</keyword-name>
+    <keyword-name>Set</keyword-name>
+    <keyword-name>SetLocale</keyword-name>
+    <keyword-name>Sgn</keyword-name>
+    <keyword-name>Sin</keyword-name>
+    <keyword-name>Space</keyword-name>
+    <keyword-name>Split</keyword-name>
+    <keyword-name>Sqr</keyword-name>
+    <keyword-name>StrComp</keyword-name>
+    <keyword-name>String</keyword-name>
+    <keyword-name>StrReverse</keyword-name>
+    <keyword-name>Sub</keyword-name>
+    <keyword-name>System</keyword-name>
+    <keyword-name>Tan</keyword-name>
+    <keyword-name>Terminate</keyword-name>
+    <keyword-name>TextStream.AtEndOfLine</keyword-name>
+    <keyword-name>TextStream.AtEndOfStream</keyword-name>
+    <keyword-name>TextStream.Close</keyword-name>
+    <keyword-name>TextStream.Column</keyword-name>
+    <keyword-name>TextStream.Line</keyword-name>
+    <keyword-name>TextStream.Read</keyword-name>
+    <keyword-name>TextStream.ReadAll</keyword-name>
+    <keyword-name>TextStream.ReadLine</keyword-name>
+    <keyword-name>TextStream.Skip</keyword-name>
+    <keyword-name>TextStream.SkipLine</keyword-name>
+    <keyword-name>TextStream.Write</keyword-name>
+    <keyword-name>TextStream.WriteBlankLines</keyword-name>
+    <keyword-name>TextStream.WriteLine</keyword-name>
+    <keyword-name>Then</keyword-name>
+    <keyword-name>Time</keyword-name>
+    <keyword-name>Timer</keyword-name>
+    <keyword-name>TimeSerial</keyword-name>
+    <keyword-name>TimeValue</keyword-name>
+    <keyword-name>To</keyword-name>
+    <keyword-name>Trim</keyword-name>
+    <keyword-name>TristateFalse</keyword-name>
+    <keyword-name>TristateTrue</keyword-name>
+    <keyword-name>TristateUseDefault</keyword-name>
+    <keyword-name>True</keyword-name>
+    <keyword-name>TypeLib.Guid</keyword-name>
+    <keyword-name>TypeName</keyword-name>
+    <keyword-name>UBound</keyword-name>
+    <keyword-name>UCase</keyword-name>
+    <keyword-name>URL</keyword-name>
+    <keyword-name>VarType</keyword-name>
+    <keyword-name>vbAbort</keyword-name>
+    <keyword-name>vbAbortRetryIgnore</keyword-name>
+    <keyword-name>vbApplicationModal</keyword-name>
+    <keyword-name>vbArray</keyword-name>
+    <keyword-name>vbBinaryCompare</keyword-name>
+    <keyword-name>vbBlack</keyword-name>
+    <keyword-name>vbBlue</keyword-name>
+    <keyword-name>vbBoolean</keyword-name>
+    <keyword-name>vbByte</keyword-name>
+    <keyword-name>vbCancel</keyword-name>
+    <keyword-name>vbCr</keyword-name>
+    <keyword-name>vbCritical</keyword-name>
+    <keyword-name>vbCrlf</keyword-name>
+    <keyword-name>vbCurrency</keyword-name>
+    <keyword-name>vbCyan</keyword-name>
+    <keyword-name>vbDataObject</keyword-name>
+    <keyword-name>vbDate</keyword-name>
+    <keyword-name>vbDecimal</keyword-name>
+    <keyword-name>vbDefaultButton1</keyword-name>
+    <keyword-name>vbDefaultButton2</keyword-name>
+    <keyword-name>vbDefaultButton3</keyword-name>
+    <keyword-name>vbDefaultButton4</keyword-name>
+    <keyword-name>vbDouble</keyword-name>
+    <keyword-name>vbEmpty</keyword-name>
+    <keyword-name>vbError</keyword-name>
+    <keyword-name>vbExclamation</keyword-name>
+    <keyword-name>vbFalse</keyword-name>
+    <keyword-name>vbFirstFourDays</keyword-name>
+    <keyword-name>vbFirstFullWeek</keyword-name>
+    <keyword-name>vbFirstJan1</keyword-name>
+    <keyword-name>vbFormFeed</keyword-name>
+    <keyword-name>vbFriday</keyword-name>
+    <keyword-name>vbGeneralDate</keyword-name>
+    <keyword-name>vbGreen</keyword-name>
+    <keyword-name>vbIgnore</keyword-name>
+    <keyword-name>vbInformation</keyword-name>
+    <keyword-name>vbInteger</keyword-name>
+    <keyword-name>vbLf</keyword-name>
+    <keyword-name>vbLong</keyword-name>
+    <keyword-name>vbLongDate</keyword-name>
+    <keyword-name>vbLongTime</keyword-name>
+    <keyword-name>vbMagenta</keyword-name>
+    <keyword-name>vbMonday</keyword-name>
+    <keyword-name>vbMsgBoxHelpButton</keyword-name>
+    <keyword-name>vbMsgBoxRight</keyword-name>
+    <keyword-name>vbMsgBoxRtlReading</keyword-name>
+    <keyword-name>vbMsgBoxSetForeground</keyword-name>
+    <keyword-name>vbNewLine</keyword-name>
+    <keyword-name>vbNo</keyword-name>
+    <keyword-name>vbNull</keyword-name>
+    <keyword-name>vbNullChar</keyword-name>
+    <keyword-name>vbNullString</keyword-name>
+    <keyword-name>vbObject</keyword-name>
+    <keyword-name>vbOK</keyword-name>
+    <keyword-name>vbOKCancel</keyword-name>
+    <keyword-name>vbOKOnly</keyword-name>
+    <keyword-name>vbQuestion</keyword-name>
+    <keyword-name>vbRed</keyword-name>
+    <keyword-name>vbretry</keyword-name>
+    <keyword-name>vbRetryCancel</keyword-name>
+    <keyword-name>vbSaturday</keyword-name>
+    <keyword-name>vbShortDate</keyword-name>
+    <keyword-name>vbShortTime</keyword-name>
+    <keyword-name>vbSingle</keyword-name>
+    <keyword-name>vbString</keyword-name>
+    <keyword-name>vbSunday</keyword-name>
+    <keyword-name>vbSystemModal</keyword-name>
+    <keyword-name>vbTab</keyword-name>
+    <keyword-name>vbTextCompare</keyword-name>
+    <keyword-name>vbThursday</keyword-name>
+    <keyword-name>vbTrue</keyword-name>
+    <keyword-name>vbTuesday</keyword-name>
+    <keyword-name>vbUseDefault</keyword-name>
+    <keyword-name>vbUseSystem</keyword-name>
+    <keyword-name>vbUseSystemDayOfWeek</keyword-name>
+    <keyword-name>vbVerticalTab</keyword-name>
+    <keyword-name>vbWednesday</keyword-name>
+    <keyword-name>vbWhite</keyword-name>
+    <keyword-name>vbYellow</keyword-name>
+    <keyword-name>vbYes</keyword-name>
+    <keyword-name>vbYesNo</keyword-name>
+    <keyword-name>vbYesNoCancel</keyword-name>
+    <keyword-name>Weekday</keyword-name>
+    <keyword-name>WeekdayName</keyword-name>
+    <keyword-name>Wend</keyword-name>
+    <keyword-name>While</keyword-name>
+    <keyword-name>WinHttp.WinHttpRequest.5.1</keyword-name>
+    <keyword-name>With</keyword-name>
+    <keyword-name>Word.Application</keyword-name>
+    <keyword-name>Xor</keyword-name>
+    <keyword-name>Year</keyword-name>
+  </keywords>
+</erptoolkit>

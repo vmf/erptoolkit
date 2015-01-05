@@ -1,6 +1,7 @@
 ﻿/*
  * ScriptRefactor.cs - This file is part of ERPToolkit
  * Copyright (C) 2014  Vinícius M. Freitas
+ * Copyright (C) 2015  Vinícius M. Freitas
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -18,10 +19,12 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Windows.Forms;
 using ERPToolkit.App.Class;
 
 namespace ERPToolkit.Class
@@ -32,6 +35,8 @@ namespace ERPToolkit.Class
     public class ScriptRefactor
     {
         private string _cumulativestring;
+        /* The list of keywords that'll be read from the xml file */
+        private List<string> listOfKeywords = new List<string>();
         /* Values: The ERPToolkit's way to pass values through classes */
         public StoreValues Values { get; set; }
 
@@ -52,7 +57,7 @@ namespace ERPToolkit.Class
                     var content = "";
 
                     /* Check if the last tag has the separator in the end. If not,
-                     * the separator will be inserted in the end of the string. This is needed
+                     * the separator will be inserted in the end of the string. We need this
                      * because the last tag is not considered if it hasn't the separator, thus,
                      * if the user does not specify, will be included anyway
                     */
@@ -124,137 +129,6 @@ namespace ERPToolkit.Class
                 initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
             }
         }
-
-        #region Block
-
-        /// <summary>
-        ///     Checks if it starts with an identifier and
-        ///     if it is a function or sub
-        /// </summary>
-        /// <param name="str">Line of the text</param>
-        /// <returns>'true' - It's a block | 'false' - it's not a block</returns>
-        private bool IsBlock(string str)
-        {
-            try
-            {
-                const int Space = 1;
-
-                /* Check if the string(line) has enough length, if so,
-                 * we can start comparing
-                 */
-                if (str.Length >= new Constants().MyPrivate.Length)
-                {
-                    // Check for the 'private' keyword
-                    if (str.Substring(0, new Constants().MyPrivate.Length).ToLower().Equals(new Constants().MyPrivate))
-                    {
-                        /*
-                         * FIXME: We are adding 1 'Constants().MyPrivate.Length + 1' because
-                         * it simulates the space after the keyword. For example:
-                         * 'private function'('private' + 1 space + 'funciton') or 
-                         * 'private variable'('private' + 1 space + 'variable'). 
-                         * But the statement can contain more than one space between 
-                         * keywords, thus, would be nice to have a method to
-                         * identify the number of spaces between keywords.
-                         */
-
-                        /* Checks whether enough characters left, if so
-                         * we can start comparing the next keyword
-                         */
-                        if (str.Length >= new Constants().MyPrivate.Length + Space + new Constants().MyFunction.Length)
-                        {
-                            // Check for the 'function' keyword
-                            if (
-                                str.Substring(new Constants().MyPrivate.Length + Space,
-                                    new Constants().MyFunction.Length)
-                                    .ToLower()
-                                    .Equals(new Constants().MyFunction))
-                                return true;
-                        }
-
-                        /* Checks whether enough characters left, if so
-                         * we can start comparing the next keyword
-                         */
-                        if (str.Length >= new Constants().MyPrivate.Length + Space + new Constants().MySub.Length)
-                        {
-                            // Check for the 'sub' keyword
-                            if (
-                                str.Substring(new Constants().MyPrivate.Length + Space, new Constants().MySub.Length)
-                                    .ToLower()
-                                    .Equals(new Constants().MySub))
-                                return true;
-                        }
-                        return false;
-                    }
-                }
-
-                /* Check if the string(line) has enough length, if so,
-                 * we can start comparing
-                 */
-                if (str.Length >= new Constants().MyPublic.Length)
-                {
-                    // Check for the 'public' keyword
-                    if (str.Substring(0, new Constants().MyPublic.Length).ToLower().Equals(new Constants().MyPublic))
-                    {
-                        /* Checks whether enough characters left, if so
-                         * we can start comparing the next keyword
-                         */
-                        if (str.Length >= new Constants().MyPublic.Length + Space + new Constants().MyFunction.Length)
-                        {
-                            // Check for the 'function' keyword
-                            if (
-                                str.Substring(new Constants().MyPublic.Length + Space, new Constants().MyFunction.Length)
-                                    .ToLower()
-                                    .Equals(new Constants().MyFunction))
-                                return true;
-                        }
-
-                        /* Checks whether enough characters left, if so
-                         * we can start comparing the next keyword
-                         */
-                        if (str.Length >= new Constants().MyPublic.Length + Space + new Constants().MySub.Length)
-                        {
-                            // Check for the 'sub' keyword
-                            if (
-                                str.Substring(new Constants().MyPublic.Length + Space, new Constants().MySub.Length)
-                                    .ToLower()
-                                    .Equals(new Constants().MySub))
-                                return true;
-                        }
-                        return false;
-                    }
-                }
-
-                /* Check if the string(line) has enough length, if so,
-                 * we can start comparing
-                 */
-                if (str.Length >= new Constants().MySub.Length)
-                {
-                    // Check for the 'sub' keyword
-                    if (str.Substring(0, new Constants().MySub.Length).ToLower().Equals(new Constants().MySub))
-                        return true;
-                }
-
-                /* Check if the string(line) has enough length, if so,
-                 * we can start comparing
-                 */
-                if (str.Length >= new Constants().MyFunction.Length)
-                {
-                    // Check for the 'function' keyword
-                    if (str.Substring(0, new Constants().MyFunction.Length).ToLower().Equals(new Constants().MyFunction))
-                        return true;
-                }
-                return false;
-            }
-            catch (Exception exception)
-            {
-                var initEx = new ExceptionHandler();
-                initEx.Values = Values;
-                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
-            }
-            return false;
-        }
-
-        #endregion
 
         #region Parameter
 
@@ -358,8 +232,8 @@ namespace ERPToolkit.Class
                 {
                     /* Removes the keyword from parameter */
                     var rParameter = parameter;
-                    rParameter = general.GetWithoutString(rParameter, new Constants().MyByVal);
-                    rParameter = general.GetWithoutString(rParameter, new Constants().MyByRef);
+                    rParameter = general.GetWithoutString(rParameter, new Constants().ByValKeyword.ToLower());
+                    rParameter = general.GetWithoutString(rParameter, new Constants().ByRefKeyword.ToLower());
 
                     /* Removes white spaces */
                     rParameter = rParameter.Trim();
@@ -440,6 +314,544 @@ namespace ERPToolkit.Class
         }
 
         #endregion
+
+        #endregion
+
+        #region RemoveWhiteSpaceEnd
+
+        /// <summary>
+        ///     Removes the white spaces of a text file
+        /// </summary>
+        /// <param name="fromFilePath">Path to the file</param>
+        /// <param name="toFilePath">Path to the file</param>
+        public void RemoveWhiteSpaceEnd(string fromFilePath, string toFilePath)
+        {
+            try
+            {
+                if (File.Exists(fromFilePath))
+                {
+                    var content = "";
+
+                    var reader = new StreamReader(fromFilePath, Encoding.GetEncoding("iso-8859-8"));
+                    var sysIo = new SysIo {Values = Values};
+
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        if (!string.IsNullOrEmpty(line))
+                        {
+                            /* Gets the line without the white spaces in the end*/
+                            content += GetRemovedWhiteSpaceEnd(line) + Environment.NewLine;
+                        }
+                        else
+                            content += Environment.NewLine;
+                    }
+
+                    reader.Close();
+
+                    sysIo.WriteToFile(toFilePath, content);
+                }
+            }
+            catch (Exception exception)
+            {
+                var initEx = new ExceptionHandler();
+                initEx.Values = Values;
+                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
+            }
+        }
+
+        #region GetRemovedWhiteSpaceEnd
+
+        /// <summary>
+        ///     Gets the line without the white spaces in the end
+        /// </summary>
+        /// <param name="line"></param>
+        /// <returns></returns>
+        private string GetRemovedWhiteSpaceEnd(string line)
+        {
+            try
+            {
+                return line.TrimEnd();
+            }
+            catch (Exception exception)
+            {
+                var initEx = new ExceptionHandler();
+                initEx.Values = Values;
+                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
+            }
+            return null;
+        }
+
+        #endregion
+
+        #endregion
+
+        #region Block
+
+        /// <summary>
+        ///     Checks if it starts with an identifier and
+        ///     if it is a function or sub
+        /// </summary>
+        /// <param name="line">Line of the text</param>
+        /// <returns>'true' - It's a block | 'false' - it's not a block</returns>
+        private bool IsBlock(string line)
+        {
+            try
+            {
+                int space;
+
+                /* Check if the string(line) has enough length, if so,
+                 * we can start comparing
+                 */
+                if (line.Length >= new Constants().PrivateKeyword.Length)
+                {
+                    // Check for the 'private' keyword
+                    if (
+                        line.Substring(0, new Constants().PrivateKeyword.Length)
+                            .ToLower()
+                            .Equals(new Constants().PrivateKeyword.ToLower()))
+                    {
+                        /* Gets the white space between the keyword of access and the keyword of the block.
+                         * Generally, the space between the keywords is '1', but it can be more than one, thus,
+                         * we must get the number of white spaces before comparing.
+                         */
+                        space = GetSpaceToBlockType(line, new Constants().PrivateKeyword.ToLower());
+
+                        /* Checks whether enough characters left, if so
+                         * we can start comparing the next keyword
+                         */
+                        if (line.Length >=
+                            new Constants().PrivateKeyword.Length + space + new Constants().FunctionKeyword.Length)
+                        {
+                            // Check for the 'function' keyword
+                            if (
+                                line.Substring(new Constants().PrivateKeyword.Length + space,
+                                    new Constants().FunctionKeyword.Length)
+                                    .ToLower()
+                                    .Equals(new Constants().FunctionKeyword.ToLower()))
+                                return true;
+                        }
+
+                        /* Checks whether enough characters left, if so
+                         * we can start comparing the next keyword
+                         */
+                        if (line.Length >=
+                            new Constants().PrivateKeyword.Length + space + new Constants().SubKeyword.Length)
+                        {
+                            // Check for the 'sub' keyword
+                            if (
+                                line.Substring(new Constants().PrivateKeyword.Length + space,
+                                    new Constants().SubKeyword.Length)
+                                    .ToLower()
+                                    .Equals(new Constants().SubKeyword.ToLower()))
+                                return true;
+                        }
+                        return false;
+                    }
+                }
+
+                /* Check if the string(line) has enough length, if so,
+                 * we can start comparing
+                 */
+                if (line.Length >= new Constants().PublicKeyword.Length)
+                {
+                    // Check for the 'public' keyword
+                    if (
+                        line.Substring(0, new Constants().PublicKeyword.Length)
+                            .ToLower()
+                            .Equals(new Constants().PublicKeyword.ToLower()))
+                    {
+                        /* Gets the white space between the keyword of access and the keyword of the block.
+                         * Generally, the space between the keywords is '1', but it can be more than one, thus,
+                         * we must get the number of white spaces before comparing.
+                         */
+                        space = GetSpaceToBlockType(line, new Constants().PublicKeyword.ToLower());
+
+                        /* Checks whether enough characters left, if so
+                         * we can start comparing the next keyword
+                         */
+                        if (line.Length >=
+                            new Constants().PublicKeyword.Length + space + new Constants().FunctionKeyword.Length)
+                        {
+                            // Check for the 'function' keyword
+                            if (
+                                line.Substring(new Constants().PublicKeyword.Length + space,
+                                    new Constants().FunctionKeyword.Length)
+                                    .ToLower()
+                                    .Equals(new Constants().FunctionKeyword.ToLower()))
+                                return true;
+                        }
+
+                        /* Checks whether enough characters left, if so
+                         * we can start comparing the next keyword
+                         */
+                        if (line.Length >=
+                            new Constants().PublicKeyword.Length + space + new Constants().SubKeyword.Length)
+                        {
+                            // Check for the 'sub' keyword
+                            if (
+                                line.Substring(new Constants().PublicKeyword.Length + space,
+                                    new Constants().SubKeyword.Length)
+                                    .ToLower()
+                                    .Equals(new Constants().SubKeyword.ToLower()))
+                                return true;
+                        }
+                        return false;
+                    }
+                }
+
+                /* Check if the string(line) has enough length, if so,
+                 * we can start comparing
+                 */
+                if (line.Length >= new Constants().SubKeyword.Length)
+                {
+                    // Check for the 'sub' keyword
+                    if (
+                        line.Substring(0, new Constants().SubKeyword.Length)
+                            .ToLower()
+                            .Equals(new Constants().SubKeyword.ToLower()))
+                        return true;
+                }
+
+                /* Check if the string(line) has enough length, if so,
+                 * we can start comparing
+                 */
+                if (line.Length >= new Constants().FunctionKeyword.Length)
+                {
+                    // Check for the 'function' keyword
+                    if (
+                        line.Substring(0, new Constants().FunctionKeyword.Length)
+                            .ToLower()
+                            .Equals(new Constants().FunctionKeyword.ToLower()))
+                        return true;
+                }
+                return false;
+            }
+            catch (Exception exception)
+            {
+                var initEx = new ExceptionHandler();
+                initEx.Values = Values;
+                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
+            }
+            return false;
+        }
+
+        /// <summary>
+        ///     Gets the white space between the keyword of access and the keyword of the block
+        /// </summary>
+        /// <param name="line">Line of the text</param>
+        /// <param name="blockAccess">Block Access ('public' or 'private')</param>
+        /// <returns></returns>
+        private int GetSpaceToBlockType(string line, string blockAccess)
+        {
+            try
+            {
+                var oGeneral = new General();
+                var index = 0;
+
+                /* Remove the blockAccess from the line, so 
+                 * we can start counting the number of white spaces
+                 */
+                var myLine = oGeneral.GetWithoutString(line, blockAccess.ToLower());
+
+                /* Counting the number of white spaces */
+                while (myLine.Substring(index, 1).Equals(@" "))
+                    index++;
+                return index;
+            }
+            catch (Exception exception)
+            {
+                var initEx = new ExceptionHandler();
+                initEx.Values = Values;
+                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
+            }
+            return -1;
+        }
+
+        #endregion
+
+        #region ChangeBlock
+
+        #region ChangeBlock
+
+        /// <summary>
+        ///     Changes a block('sub' or 'function') of a vbscript
+        /// </summary>
+        /// <param name="fromFilePath">Path to the file</param>
+        /// <param name="toFilePath">Path to the file</param>
+        /// <param name="oldBlockName">Name of the old block(block that'll be replaced)</param>
+        /// <param name="newBlock">Entire new block('sub' or 'function')</param>
+        public void ChangeBlock(string fromFilePath, string toFilePath, string oldBlockName, string newBlock)
+        {
+            try
+            {
+                if (File.Exists(fromFilePath))
+                {
+                    var content = "";
+
+                    var reader = new StreamReader(fromFilePath, Encoding.GetEncoding("iso-8859-8"));
+                    var sysIo = new SysIo {Values = Values};
+
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        if (!string.IsNullOrEmpty(line))
+                        {
+                            if (IsBlock(line))
+                            {
+                                /* Checks if the block that we must find to replace 
+                                 * is equal to the block that was found in this line
+                                 */
+                                if (oldBlockName.ToLower().Trim().Equals(GetBlockName(line).ToLower().Trim()))
+                                {
+                                    /* Reads the lines while it is the old block. Thus,
+                                     * when have finished the reading, we just update the
+                                     * the text part that wasn't added yet.
+                                     */
+                                    ReadWhileBlock(reader);
+
+                                    /* Gets the new block */
+                                    content += newBlock + Environment.NewLine;
+                                }
+                                else
+                                    content += line + Environment.NewLine;
+                            }
+                            else
+                                content += line + Environment.NewLine;
+                        }
+                        else
+                            content += line + Environment.NewLine;
+                    }
+
+                    reader.Close();
+
+                    sysIo.WriteToFile(toFilePath, content);
+                }
+            }
+            catch (Exception exception)
+            {
+                var initEx = new ExceptionHandler();
+                initEx.Values = Values;
+                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
+            }
+        }
+
+        #endregion
+
+        #region BlockName
+
+        /// <summary>
+        ///     Gets the block name('function' name or 'sub' name)
+        /// </summary>
+        /// <param name="line">Line of the text file</param>
+        /// <returns>Block name</returns>
+        private string GetBlockName(string line)
+        {
+            try
+            {
+                var oGeneral = new General();
+                var myLine = line.ToLower();
+
+                /* Removes all the access and type keywords from the line, thus, we can
+                 * get the block name easier.
+                 */
+                myLine = oGeneral.GetWithoutString(myLine, new Constants().PrivateKeyword.ToLower());
+                myLine = oGeneral.GetWithoutString(myLine, new Constants().PublicKeyword.ToLower());
+                myLine = oGeneral.GetWithoutString(myLine, new Constants().FunctionKeyword.ToLower());
+                myLine = oGeneral.GetWithoutString(myLine, new Constants().SubKeyword.ToLower());
+
+                /* Gets the '(' index of the line position because 
+                 * once found it we have the end of the block name('function', 'sub').             
+                 */
+                return myLine.Substring(0, oGeneral.GetCharPosition(myLine, @"(") - 1).TrimStart();
+            }
+            catch (Exception exception)
+            {
+                var initEx = new ExceptionHandler();
+                initEx.Values = Values;
+                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
+            }
+            return null;
+        }
+
+        #endregion
+
+        #region ReadWhileBlock
+
+        /// <summary>
+        ///     Reads the block of the script while the spacified block
+        ///     wasn't finished.
+        /// </summary>
+        /// <param name="reader">StreamReader object</param>
+        private void ReadWhileBlock(StreamReader reader)
+        {
+            try
+            {
+                const int space = 1;
+
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    if (!string.IsNullOrEmpty(line))
+                    {
+                        /* Check if it starts with the 'end' keyword */
+                        if (line.ToLower()
+                            .Substring(0, new Constants().EndKeyword.Length)
+                            .Equals(new Constants().EndKeyword.ToLower()))
+                        {
+                            /* Checks if it has enough length to compare */
+                            if (line.Length >=
+                                new Constants().EndKeyword.Length + space + new Constants().FunctionKeyword.Length)
+                            {
+                                /* Check if it is a end of a function */
+                                if (line.ToLower()
+                                    .Substring(new Constants().EndKeyword.Length + space,
+                                        new Constants().FunctionKeyword.Length)
+                                    .Equals(new Constants().FunctionKeyword.ToLower()))
+                                {
+                                    break;
+                                }
+                            }
+
+                            /* Checks if it has enough length to compare */
+                            if (line.Length >=
+                                new Constants().EndKeyword.Length + space + new Constants().SubKeyword.Length)
+                            {
+                                /* Check if it is a end of a sub */
+                                if (line.ToLower()
+                                    .Substring(new Constants().EndKeyword.Length + space,
+                                        new Constants().SubKeyword.Length)
+                                    .Equals(new Constants().SubKeyword.ToLower()))
+                                {
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                var initEx = new ExceptionHandler();
+                initEx.Values = Values;
+                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
+            }
+        }
+
+        #endregion
+
+        #endregion
+
+        #region DefineScriptCase
+
+        /// <summary>
+        ///     Defines the script case(case of the keywords)
+        /// </summary>
+        /// <param name="fromFilePath"></param>
+        /// <param name="toFilePath"></param>
+        /// <param name="keywordCase">
+        ///     Optional. The case that will be defined for the keywords.
+        ///     "D" - Default,
+        ///     "L" - Lower Case,
+        ///     "U" - Upper Case
+        /// </param>
+        public void DefineScriptCase(string fromFilePath, string toFilePath, string keywordCase = "D")
+        {
+            try
+            {
+                if (File.Exists(fromFilePath))
+                {
+                    var content = "";
+                    var reader = new StreamReader(fromFilePath, Encoding.GetEncoding("iso-8859-8"));
+                    var sysIo = new SysIo {Values = Values};
+
+                    /* While it's not in the end of file */
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        if (!string.IsNullOrEmpty(line))
+                        {
+                            /* It gets the refactored line. It'll basically replace
+                             * all the keywords of the line with the keywords of the
+                             * xml(if found) and more important:
+                             * * it'll replace with the case defined in 'keywordCase'*
+                             */
+
+                            content += DefineKeywordsCase(line, keywordCase) + Environment.NewLine;
+                        }
+                        else
+                            content += Environment.NewLine;
+                    }
+
+                    reader.Close();
+
+                    sysIo.WriteToFile(toFilePath, content);
+                }
+            }
+            catch (Exception exception)
+            {
+                var initEx = new ExceptionHandler();
+                initEx.Values = Values;
+                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
+            }
+        }
+
+        private string DefineKeywordsCase(string line, string keywordCase)
+        {
+            try
+            {
+                var myLine = line;
+
+                /* Does not read the keywords again once read it */
+                if (listOfKeywords.Count == 0)
+                {
+                    listOfKeywords = new Xml().GetListFromXml(
+                        @"C:\Users\Vinicius M. Freitas\Source\Workspaces\ERPToolkit\ERPToolkit\Resources\Keyword\Language\vbscript.xml",
+                        @"keyword-name");
+                }
+
+                var oGeneral = new General();
+                foreach (var item in listOfKeywords)
+                {
+                    /* In the next section it'll define what case to use
+                     * for the keywords of the line.
+                     */
+
+                    /* Default Case */
+                    if (keywordCase.Trim().ToUpper().Equals("D"))
+                    {
+                        myLine = oGeneral.Replace(myLine, item, item, false);
+                    }
+
+                    /* Lower Case */
+                    else if (keywordCase.Trim().ToUpper().Equals("L"))
+                    {
+                        myLine = oGeneral.Replace(myLine, item, item.ToLower(), false);
+                    }
+
+                    /* Upper Case */
+                    else if (keywordCase.Trim().ToUpper().Equals("U"))
+                    {
+                        myLine = oGeneral.Replace(myLine, item, item.ToUpper(), false);
+                    }
+
+                    /* Unknown parameter */
+                    else
+                    {
+                        MessageBox.Show("Unknown parameter");
+                    }
+                }
+
+                return myLine;
+            }
+            catch (Exception exception)
+            {
+                var initEx = new ExceptionHandler();
+                initEx.Values = Values;
+                initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
+            }
+            return null;
+        }
 
         #endregion
     }

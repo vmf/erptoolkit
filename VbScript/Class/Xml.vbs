@@ -1,6 +1,5 @@
-' Uac.vbs - This file is part of ERPToolkit
-' Copyright (C) 2014  Vinícius M. Freitas
-' Copyright (C) 2015  Vinícius M. Freitas
+' Xml.vbs - This file is part of ERPToolkit
+' Copyright (C) 2015  VinÃ­cius M. Freitas
 ' 
 ' This program is free software; you can redistribute it and/or
 ' modify it under the terms of the GNU General Public License
@@ -19,26 +18,27 @@
 'Sets basic values
 SetBasicValues
 
-'ERPToolkit_Modify 1, 0, 0, 0
-'ERPToolkit_Modify 1, 5, 3, 1
-public sub ERPToolkit_Modify(byval enableLua, byval consentPromptBehaviorAdmin, _
-	byval consentPromptBehaviorUser, byval promptOnSecureDesktop)
+'msgbox(ERPToolkit_GetListFromXml(_
+'"C:\files\myfile.xml", _
+'"mynode"))
+public function ERPToolkit_GetListFromXml(byval xmlPath, byval node)
+Dim oXml, oGeneral
+    Set oXml = CreateObject("ERPToolkit.Class.Xml")
+	oXml.Values = GetBasicValues()
 	
-Dim oUac
-	Set oUac = CreateObject("ERPToolkit.Class.Uac")
-	'Assigns to the Values object the returned object
-	oUac.Values = GetBasicValues()
+	'Object from general class(this object will be used to help us to 
+	'get values from generic lists 'List<string>')
+	Set oGeneral = CreateObject("ERPToolkit.Class.General")
+	oGeneral.Values = GetBasicValues()
 	
 	'/// <summary>
-    '/// Modify UAC Level based on the parameters given
+    '/// Gets a generic List<string> from an xml file.
     '/// </summary>
-    '/// <param name="enableLua">("1" TO DECAY) ("1" FOR RAISE)</param>
-    '/// <param name="consentPromptBehaviorAdmin">("0" TO DECAY) ("5" FOR RAISE)</param>
-    '/// <param name="consentPromptBehaviorUser">("0" TO DECAY) ("3" FOR RAISE)</param>
-    '/// <param name="promptOnSecureDesktop">("0" TO DECAY) ("1" FOR RAISE)</param>
-	oUac.Modify enableLua, consentPromptBehaviorAdmin, _
-		consentPromptBehaviorUser, promptOnSecureDesktop
-end sub
+    '/// <param name="xmlPath">Path to the xml file</param>
+    '/// <param name="node">The descendants that we're going to get</param>
+    '/// <returns></returns>
+	ERPToolkit_GetListFromXml = oGeneral.GetStringFromList(oXml.GetListFromXml(xmlPath, node), ";")
+end function
 
 public function GetBasicValues()
 Dim oStoreValues
@@ -46,7 +46,7 @@ Dim oStoreValues
 	'Creates a new object
 	'The ERPToolkit.App.Class.StoreValues object is the ERPToolkit's way to pass information
 	'through classes
-	Set oStoreValues = CreateObject("ERPToolkit.App.Class.StoreValues")
+	Set oStoreValues = CreateObject("ERPToolkit.App.Class.StoreValues")	
 	'Defines the language
 	oStoreValues.Language = "en-US"
     oStoreValues.ResourceManager = "ERPToolkit.Resources.Lang.res_en_us"	

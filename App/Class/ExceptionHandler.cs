@@ -1,6 +1,7 @@
 ﻿/*
  * ExceptionHandler.cs - This file is part of ERPToolkit
  * Copyright (C) 2014  Vinícius M. Freitas
+ * Copyright (C) 2015  Vinícius M. Freitas
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -66,7 +67,7 @@ namespace ERPToolkit.App.Class
                 if (string.IsNullOrEmpty(Values.Language) || string.IsNullOrEmpty(Values.ResourceManager))
                 {
                     Values.Language = "en-US";
-                    Values.ResourceManager = "ERPToolkit.Lang.res_en_us";
+                    Values.ResourceManager = "ERPToolkit.Resources.Lang.res_en_us";
                 }
 
                 var a = Assembly.Load("ERPToolkit");

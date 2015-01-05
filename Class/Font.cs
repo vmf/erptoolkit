@@ -1,6 +1,7 @@
 ﻿/*
  * Font.cs - This file is part of ERPToolkit
  * Copyright (C) 2014  Vinícius M. Freitas
+ * Copyright (C) 2015  Vinícius M. Freitas
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -62,7 +63,7 @@ namespace ERPToolkit.Class
                 // Export with the same resource name
                 var exePath = Path.Combine(new Constants().TempPath, resourceName);
 
-                var resource = "ERPToolkit.FontReg" + "." + resourceName;
+                var resource = "ERPToolkit.Resources.FontReg" + "." + resourceName;
 
                 res.ExtractResource(exePath, resource);
 

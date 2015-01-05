@@ -1,5 +1,6 @@
 ' Resource.vbs - This file is part of ERPToolkit
 ' Copyright (C) 2014  Vinícius M. Freitas
+' Copyright (C) 2015  Vinícius M. Freitas
 ' 
 ' This program is free software; you can redistribute it and/or
 ' modify it under the terms of the GNU General Public License
@@ -18,7 +19,7 @@
 'Sets basic values
 SetBasicValues
 
-'ERPToolkit_ExtractResource "C:\files\FontReg_x86-32.exe", "ERPToolkit.FontReg.FontReg_x86-32.exe"
+'ERPToolkit_ExtractResource "C:\files\FontReg_x86-32.exe", "ERPToolkit.Resources.FontReg.FontReg_x86-32.exe"
 public sub ERPToolkit_ExtractResource(byval filePath, byval resource)
 Dim oRes
 	Set oRes = CreateObject("ERPToolkit.App.Class.Resource")
@@ -41,7 +42,7 @@ Dim oStoreValues
 	Set oStoreValues = CreateObject("ERPToolkit.App.Class.StoreValues")
 	'Defines the language
 	oStoreValues.Language = "en-US"
-    oStoreValues.ResourceManager = "ERPToolkit.Lang.res_en_us"	
+    oStoreValues.ResourceManager = "ERPToolkit.Resources.Lang.res_en_us"	
 		
 	'ERP Software information
 	oStoreValues.ErpName = "ERPName"

@@ -12,13 +12,11 @@ The ERPToolkit source tree is quite simple.
 
 \Documentation - All ERPToolkit documentation.
 
-\FontReg - Small .exe files that installs windows's fonts for us.
-
 \Info - ERPToolkit information for development like the last GUID used.
 
-\Lang - Language resources which are used in win forms.
-
 \Resources - All ERPToolkit resources(Resources used in winforms and components) like images.
+    \FontReg - Small .exe files that installs windows's fonts for us.
+	\Lang - Language resources which are used in win forms.
 
 \Test - Classes for testing the ERPToolkit.
 

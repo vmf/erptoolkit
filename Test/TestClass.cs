@@ -1,6 +1,7 @@
 ﻿/*
  * TestClass.cs - This file is part of ERPToolkit
  * Copyright (C) 2014  Vinícius M. Freitas
+ * Copyright (C) 2015  Vinícius M. Freitas
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -38,7 +39,8 @@ namespace ERPToolkit.Test
 
             #region WinForm
 
-            //TestProgressBar();
+            //TestProgressForm();
+            //TestProgressForm2();
 
             #endregion
 
@@ -54,9 +56,25 @@ namespace ERPToolkit.Test
 
             //TestAddSummary();
 
+            //TestChangeBlock();
+
+            //TestDefineScriptCase();            
+
             #endregion
 
             #region SysIo
+
+            #endregion
+
+            #region Xml
+
+            //TestGetListFromXml();
+
+            #endregion
+
+            #region General
+
+            //TestReplaceInText();
 
             #endregion
 
@@ -67,13 +85,19 @@ namespace ERPToolkit.Test
             //TestExtractResource();
 
             #endregion
+
+            #region LastTest
+
+            TestChangeBlock();
+
+            #endregion
         }
 
         #region WinForm
 
         #region ProgressForm
 
-        private static void TestProgressBar()
+        private static void TestProgressForm()
         {
             var values = GetBasicValues();
 
@@ -81,18 +105,15 @@ namespace ERPToolkit.Test
             progress.Values = values;
 
             progress.Show();
-            progress.MainMaximum = 15;
-            progress.SubMaximum = 5000;
-            progress.MainMinimum = 1;
-            progress.SubMinimum = 1;
+            progress.MainMaximum = 5;
+            progress.SubMaximum = 3000;
+            progress.MainMinimum = 0;
+            progress.SubMinimum = 0;
             progress.Title = "mytitle";
             progress.MainMessage = "main";
 
             for (var i = 1; i <= progress.MainMaximum; i++)
             {
-                progress.IncrementMain();
-                progress.MainMessage = "Main Process...";
-
                 // Sub 1
                 progress.SubValue = 1;
                 for (var j = 1; j <= progress.SubMaximum; j++)
@@ -100,6 +121,9 @@ namespace ERPToolkit.Test
                     progress.IncrementSub();
                     progress.SubMessage = "Sub-Process A...";
                 }
+
+                progress.IncrementMain();
+                progress.MainMessage = "Main Process...";
 
                 // Sub 2
                 progress.SubValue = 1;
@@ -132,7 +156,7 @@ namespace ERPToolkit.Test
             var oRes = new Resource();
             oRes.Values = GetBasicValues();
 
-            oRes.ExtractResource(@"C:\files\FontReg_x86-32.exe", @"ERPToolkit.FontReg.FontReg_x86-32.exe");
+            oRes.ExtractResource(@"C:\files\FontReg_x86-32.exe", @"ERPToolkit.Resources.FontReg.FontReg_x86-32.exe");
         }
 
         #endregion
@@ -145,10 +169,10 @@ namespace ERPToolkit.Test
         {
             var values = new StoreValues();
             values.Language = "en-US";
-            values.ResourceManager = "ERPToolkit.Lang.res_en_us";
+            values.ResourceManager = "ERPToolkit.Resources.Lang.res_en_us";
 
             //values.Language = "pt-BR";
-            //values.ResourceManager = "ERPToolkit.Lang.res_pt_br";
+            //values.ResourceManager = "ERPToolkit.Resources.Lang.res_pt_br";
 
             /*values.WindowSize[0] = 1;
             values.WindowSize[1] = 1;
@@ -198,8 +222,8 @@ namespace ERPToolkit.Test
             var oSr = new ScriptRefactor();
             oSr.Values = GetBasicValues();
 
-            oSr.AddSummary(@"C:\files\test_script.vbs",
-                @"C:\files\myscript01.vbs",
+            oSr.AddSummary(@"C:\files\from_script.vbs",
+                @"C:\files\to_script.vbs",
                 @"<example></example>;" +
                 @"<os>145636</os>;" +
                 @"<developer></developer>;" +
@@ -207,6 +231,59 @@ namespace ERPToolkit.Test
                 @"<created></created>;" +
                 @"<updated></updated>;" +
                 @"<dependeces></dependeces>;");
+        }
+
+        private static void TestChangeBlock()
+        {
+            var oSr = new ScriptRefactor();
+            oSr.Values = GetBasicValues();
+
+            oSr.ChangeBlock(@"C:\files\from_script.vbs",
+                @"C:\files\to_script.vbs",
+                @"Test",
+                "private sub Test2() " + Environment.NewLine +
+                "    dim a" + Environment.NewLine +
+                "end function");
+        }
+
+        private static void TestDefineScriptCase()
+        {
+            var oSr = new ScriptRefactor();
+            oSr.Values = GetBasicValues();
+
+            oSr.DefineScriptCase(@"c:\files\from_script.vbs", @"c:\files\to_script.vbs");
+        }
+
+        private static void TestRemoveWhiteSpaceEnd()
+        {
+        }
+
+        #endregion
+
+        #region Xml
+
+        private static void TestGetListFromXml()
+        {
+            var xml = new Xml();
+            var list =
+                xml.GetListFromXml(
+                    @"C:\Users\Vinicius M. Freitas\Source\Workspaces\ERPToolkit\ERPToolkit\Resources\Keyword\Language\vbscript.xml",
+                    "keyword-name");
+
+            foreach (var item in list)
+                Console.WriteLine(item);
+        }
+
+        #endregion
+
+        #region General
+
+        private static void TestReplaceInText()
+        {
+            var oGeneral = new General();
+            oGeneral.Values = GetBasicValues();
+
+            MessageBox.Show(oGeneral.Replace("function", "Function", "Funtion", false));
         }
 
         #endregion
