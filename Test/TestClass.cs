@@ -88,7 +88,7 @@ namespace ERPToolkit.Test
 
             #region LastTest
 
-            TestChangeBlock();
+            //TestChangeBlock();
 
             #endregion
         }
@@ -278,7 +278,7 @@ namespace ERPToolkit.Test
 
         #region General
 
-        private static void TestReplaceInText()
+        private static void TestReplace()
         {
             var oGeneral = new General();
             oGeneral.Values = GetBasicValues();

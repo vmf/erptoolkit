@@ -38,6 +38,24 @@ Dim oGeneral
 	ERPToolkit_Filter = oGeneral.Filter(item, filter, matchCase, matchWhole)
 end function
 
+'msgbox(ERPToolkit_Replace("iamviniciusfrombrazil", "vinicius", "othername", false))
+'msgbox(ERPToolkit_Replace("function", "Function", "Function", false))
+public function ERPToolkit_Replace(byval str, byval findWhat, byval replaceWith, byval matchCase)
+Dim oGeneral
+    Set oGeneral = CreateObject("ERPToolkit.Class.General")
+	oGeneral.Values = GetBasicValues()
+
+	'/// <summary>
+    '///     Replaces a text
+    '/// </summary>
+    '/// <param name="str">Text</param>
+    '/// <param name="findWhat">What we want to find</param>
+    '/// <param name="replaceWith">What we want to replace(if we find)</param>
+    '/// <param name="matchCase">The text will be found using match case ?</param>
+    '/// <returns>Replaced text(if found)</returns>
+	ERPToolkit_Replace = oGeneral.Replace(str, findWhat, replaceWith, matchCase)
+end function
+
 'msgbox(ERPToolkit_IsTherePrefix("sym_test", "sym"))
 public function ERPToolkit_IsTherePrefix(byval str, byval prefix)
 Dim oGeneral
@@ -180,6 +198,23 @@ Dim oGeneral, oMethodInfo, oSysEnv
 	'Gets the string list from a generic list 'List<string>'
 	msgbox(oGeneral.GetStringFromList(oMethodInfo.GetPublicMethodInfoList(oSysEnv.GetType), ";"))
 end sub
+
+'msgbox(ERPToolkit_GetNumberWhileChar("aaabbb", "a", 0))
+'msgbox(ERPToolkit_GetNumberWhileChar("aaabbbb", "b", 2))
+public function ERPToolkit_GetNumberWhileChar(byval str, byval ch, byval since)
+Dim oGeneral
+	Set oGeneral = CreateObject("ERPToolkit.Class.General")
+	oGeneral.Values = GetBasicValues()
+	
+	'/// <summary>
+    '///     Gets the number of a char while the substring contains the char
+    '/// </summary>
+    '/// <param name="str">String</param>
+    '/// <param name="ch">Char that we want to find</param>
+    '/// <param name="since">Optional. The start number of the index of the loop</param>
+    '/// <returns></returns>
+	ERPToolkit_GetNumberWhileChar = oGeneral.GetNumberWhileChar(str, ch, since)
+end function
 
 public function GetBasicValues()
 Dim oStoreValues

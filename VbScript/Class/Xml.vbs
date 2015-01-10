@@ -19,9 +19,13 @@
 SetBasicValues
 
 'msgbox(ERPToolkit_GetListFromXml(_
-'"C:\files\myfile.xml", _
-'"mynode"))
-public function ERPToolkit_GetListFromXml(byval xmlPath, byval node)
+'" <erptoolkit> " & _
+'"  <keywords> " & _
+'"    <keyword-name>Explicit</keyword-name> " & _
+'"  </keywords> " & _
+'"</erptoolkit> ", _
+'"keyword-name"))
+public function ERPToolkit_GetListFromXml(byval xml, byval node)
 Dim oXml, oGeneral
     Set oXml = CreateObject("ERPToolkit.Class.Xml")
 	oXml.Values = GetBasicValues()
@@ -32,12 +36,12 @@ Dim oXml, oGeneral
 	oGeneral.Values = GetBasicValues()
 	
 	'/// <summary>
-    '/// Gets a generic List<string> from an xml file.
+    '///     Gets a generic List<string> from an xml.
     '/// </summary>
-    '/// <param name="xmlPath">Path to the xml file</param>
-    '/// <param name="node">The descendants that we're going to get</param>
+    '/// <param name="xml">Xml</param>
+    '/// <param name="node">The descendants value that we're going to get</param>
     '/// <returns></returns>
-	ERPToolkit_GetListFromXml = oGeneral.GetStringFromList(oXml.GetListFromXml(xmlPath, node), ";")
+	ERPToolkit_GetListFromXml = oGeneral.GetStringFromList(oXml.GetListFromXml(xml, node), ";")
 end function
 
 public function GetBasicValues()

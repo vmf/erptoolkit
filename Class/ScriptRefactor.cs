@@ -20,8 +20,11 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
+using System.Net.Mime;
 using System.Reflection;
+using System.Resources;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
@@ -36,9 +39,12 @@ namespace ERPToolkit.Class
     {
         private string _cumulativestring;
         /* The list of keywords that'll be read from the xml file */
-        private List<string> listOfKeywords = new List<string>();
+        private List<string> _listOfKeywords = new List<string>();
         /* Values: The ERPToolkit's way to pass values through classes */
         public StoreValues Values { get; set; }
+
+        private CultureInfo _ci;
+        private ResourceManager _rm;
 
         #region AddSummary
 
@@ -774,10 +780,15 @@ namespace ERPToolkit.Class
                             /* It gets the refactored line. It'll basically replace
                              * all the keywords of the line with the keywords of the
                              * xml(if found) and more important:
-                             * * it'll replace with the case defined in 'keywordCase'*
+                             * it'll replace with the case defined in 'keywordCase'.
+                             * If the method return null means that something goes wrong,
+                             * thus, the loop in lines will break.
                              */
-
-                            content += DefineKeywordsCase(line, keywordCase) + Environment.NewLine;
+                            var newContent = DefineKeywordsCase(line, keywordCase);
+                            if (!string.IsNullOrEmpty(newContent))
+                                content += newContent + Environment.NewLine;
+                            else
+                                break;
                         }
                         else
                             content += Environment.NewLine;
@@ -803,15 +814,15 @@ namespace ERPToolkit.Class
                 var myLine = line;
 
                 /* Does not read the keywords again once read it */
-                if (listOfKeywords.Count == 0)
+                if (_listOfKeywords.Count == 0)
                 {
-                    listOfKeywords = new Xml().GetListFromXml(
-                        @"C:\Users\Vinicius M. Freitas\Source\Workspaces\ERPToolkit\ERPToolkit\Resources\Keyword\Language\vbscript.xml",
+                    _listOfKeywords = new Xml().GetListFromXml(
+                        ERPToolkit.Properties.Resources.vbscript,
                         @"keyword-name");
                 }
 
                 var oGeneral = new General();
-                foreach (var item in listOfKeywords)
+                foreach (var item in _listOfKeywords)
                 {
                     /* In the next section it'll define what case to use
                      * for the keywords of the line.
@@ -838,7 +849,12 @@ namespace ERPToolkit.Class
                     /* Unknown parameter */
                     else
                     {
-                        MessageBox.Show("Unknown parameter");
+                        MessageBox.Show(_rm.GetString("unknownParameter", _ci) + @": " + keywordCase, _rm.GetString("warning"), MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                        /* Returning null the main method will known 
+                         * that something goes wrong and will break the loop 
+                         */
+                        return null;                        
                     }
                 }
 
@@ -851,6 +867,26 @@ namespace ERPToolkit.Class
                 initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
             }
             return null;
+        }
+
+        #endregion
+
+        #region InitializeLanguage
+
+        /// <summary>
+        ///     Initializes language
+        /// </summary>
+        public void InitializeLanguage()
+        {
+            /* If the language wasn't specified, English will be the default language */
+            if (string.IsNullOrEmpty(Values.Language) || string.IsNullOrEmpty(Values.ResourceManager))
+            {
+                Values.Language = "en-US";
+                Values.ResourceManager = "ERPToolkit.Resources.Lang.res_en_us";
+            }
+            _ci = new CultureInfo(Values.Language);
+            var a = Assembly.Load("ERPToolkit");
+            _rm = new ResourceManager(Values.ResourceManager, a);
         }
 
         #endregion

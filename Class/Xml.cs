@@ -36,35 +36,32 @@ namespace ERPToolkit.Class
         public StoreValues Values { get; set; }
 
         /// <summary>
-        ///     Gets a generic List<string> from an xml file.
+        ///     Gets a generic List<string> from an xml.
         /// </summary>
-        /// <param name="xmlPath">Path to the xml file</param>
-        /// <param name="node">The descendants that we're going to get</param>
+        /// <param name="xml">Xml</param>
+        /// <param name="node">The descendants value that we're going to get</param>
         /// <returns></returns>
-        public List<string> GetListFromXml(string xmlPath, string node)
+        public List<string> GetListFromXml(string xml, string node)
         {
             try
             {
                 var list = new List<string>();
 
-                /* Loads the xml file */
-                var doc = XDocument.Load(xmlPath);
-
-                if (!string.IsNullOrEmpty(xmlPath))
+                if (!string.IsNullOrEmpty(xml))
                 {
-                    if (File.Exists(xmlPath))
-                    {
-                        /* For each value that we're getting,
-                         * it's been added to the generic List<string>
-                         */
-                        foreach (var myNode in doc.Descendants(node))
-                        {
-                            list.Add(myNode.Value);
-                        }
-                    }
-                }
+                    /* Loads the xml file */
+                    var doc = XDocument.Parse(xml);
 
-                return list;
+                    /* For each value that we're getting,
+                     * it's been added to the generic List<string>
+                     */
+                    foreach (var myNode in doc.Descendants(node))
+                    {
+                        list.Add(myNode.Value);
+                    }
+
+                    return list;
+                }                
             }
             catch (Exception exception)
             {

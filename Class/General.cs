@@ -208,9 +208,9 @@ namespace ERPToolkit.Class
         /// </summary>
         /// <param name="str">String</param>
         /// <param name="ch">Char that we want to find</param>
-        /// <param name="since">The start number of the index of the loop</param>
+        /// <param name="since">Optional. The start number of the index of the loop</param>
         /// <returns></returns>
-        private int GetNumberWhileChar(string str, string ch, int since = 0)
+        public int GetNumberWhileChar(string str, string ch, int since = 0)
         {
             try
             {

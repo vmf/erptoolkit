@@ -79,5 +79,27 @@ namespace ERPToolkit.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;Windows-1252&quot;?&gt;
+        ///
+        ///&lt;erptoolkit&gt;
+        ///  &lt;keywords&gt;
+        ///    &lt;keyword-name&gt;Explicit&lt;/keyword-name&gt;
+        ///    &lt;keyword-name&gt;Option&lt;/keyword-name&gt;
+        ///    &lt;keyword-name&gt;Abs&lt;/keyword-name&gt;
+        ///    &lt;keyword-name&gt;adModeRead&lt;/keyword-name&gt;
+        ///    &lt;keyword-name&gt;adModeReadWrite&lt;/keyword-name&gt;
+        ///    &lt;keyword-name&gt;ADODB.Connection&lt;/keyword-name&gt;
+        ///    &lt;keyword-name&gt;ADODB.Recordset&lt;/keyword-name&gt;
+        ///    &lt;keyword-name&gt;adOpenDynamic&lt;/keyword-name&gt;
+        ///    &lt;keyword-name&gt;adOpenForwardOnly&lt;/keyword-name&gt;
+        ///    &lt;keyword-name [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string vbscript {
+            get {
+                return ResourceManager.GetString("vbscript", resourceCulture);
+            }
+        }
     }
 }

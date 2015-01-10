@@ -88,6 +88,11 @@ Dim oScriptRefactor
 	Set oScriptRefactor = CreateObject("ERPToolkit.Class.ScriptRefactor")
 	oScriptRefactor.Values = GetBasicValues()
 	
+	'Initializes the language
+	'If the language wasn't specified through StoreValues object,
+	'English will be the default language
+	oScriptRefactor.InitializeLanguage
+	
 	'/// <summary>
     '/// Defines the script case(case of the keywords)
     '/// </summary>
