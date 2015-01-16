@@ -61,6 +61,7 @@
     <keyword-name>CONTENT_LENGTH</keyword-name>
     <keyword-name>CONTENT_TYPE</keyword-name>
     <keyword-name>Cos</keyword-name>
+	<keyword-name>Const</keyword-name>
     <keyword-name>Count</keyword-name>
     <keyword-name>CreateObject</keyword-name>
     <keyword-name>CSng</keyword-name>
@@ -102,6 +103,7 @@
     <keyword-name>Drives.Count</keyword-name>
     <keyword-name>Drives.Item</keyword-name>
     <keyword-name>Else</keyword-name>
+	<keyword-name>ElseIf</keyword-name>
     <keyword-name>End Class</keyword-name>
     <keyword-name>End Function</keyword-name>
     <keyword-name>End If</keyword-name>
@@ -131,6 +133,7 @@
     <keyword-name>Exit Sub</keyword-name>
     <keyword-name>Exp</keyword-name>
     <keyword-name>False</keyword-name>
+	<keyword-name>Fields</keyword-name>
     <keyword-name>File.Attributes</keyword-name>
     <keyword-name>File.Copy</keyword-name>
     <keyword-name>File.DateCreated</keyword-name>
@@ -263,6 +266,8 @@
     <keyword-name>Mod</keyword-name>
     <keyword-name>Month</keyword-name>
     <keyword-name>MonthName</keyword-name>
+	<keyword-name>MoveNext</keyword-name>
+	<keyword-name>MoveFirst</keyword-name>
     <keyword-name>MsgBox</keyword-name>
     <keyword-name>Next</keyword-name>
     <keyword-name>Not</keyword-name>
@@ -277,6 +282,7 @@
     <keyword-name>Outlook.Application</keyword-name>
     <keyword-name>PATH_INFO</keyword-name>
     <keyword-name>PATH_TRANSLATEDPrivate</keyword-name>
+	<keyword-name>Preserve</keyword-name>
     <keyword-name>Private Const</keyword-name>
     <keyword-name>Private Function</keyword-name>
     <keyword-name>Private Property Get</keyword-name>
@@ -301,6 +307,7 @@
     <keyword-name>QUERY_STRING</keyword-name>
     <keyword-name>Randomize</keyword-name>
     <keyword-name>ReadOnly</keyword-name>
+	<keyword-name>RecordCount</keyword-name>
     <keyword-name>Redim</keyword-name>
     <keyword-name>RegExp.Execute</keyword-name>
     <keyword-name>RegExp.Global</keyword-name>

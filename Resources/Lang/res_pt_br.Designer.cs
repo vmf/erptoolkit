@@ -269,6 +269,15 @@ namespace ERPToolkit.Resources.Lang {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Parâmetro desconhecido.
+        /// </summary>
+        internal static string unknownParameter {
+            get {
+                return ResourceManager.GetString("unknownParameter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Você tem certeza de que deseja cancelar ?.
         /// </summary>
         internal static string wantToCancel {

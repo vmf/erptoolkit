@@ -35,7 +35,7 @@ WHAT LANGUAGE DO THE WINFORMS WORK ?
 
 BUILDING THE ERPTOOLKIT SOURCE:
 
-- Launch your "Visual Studio" version >= 2013.
+- Launch your "Visual Studio" version >= 2012.
 - The toolkit does not contain any external reference, thus, you can just build clicking in BUILD > Build Solution(F6).
 - Execute the register.bat. It will register and generate the .reg file with all the ERPToolkit references that'll be added
   into the registry for you.

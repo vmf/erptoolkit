@@ -831,19 +831,19 @@ namespace ERPToolkit.Class
                     /* Default Case */
                     if (keywordCase.Trim().ToUpper().Equals("D"))
                     {
-                        myLine = oGeneral.Replace(myLine, item, item, false);
+                        myLine = oGeneral.Replace(myLine, item, item, false, true);
                     }
 
                     /* Lower Case */
                     else if (keywordCase.Trim().ToUpper().Equals("L"))
                     {
-                        myLine = oGeneral.Replace(myLine, item, item.ToLower(), false);
+                        myLine = oGeneral.Replace(myLine, item, item.ToLower(), false, true);
                     }
 
                     /* Upper Case */
                     else if (keywordCase.Trim().ToUpper().Equals("U"))
                     {
-                        myLine = oGeneral.Replace(myLine, item, item.ToUpper(), false);
+                        myLine = oGeneral.Replace(myLine, item, item.ToUpper(), false, true);
                     }
 
                     /* Unknown parameter */

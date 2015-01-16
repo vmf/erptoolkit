@@ -210,4 +210,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.<
   <data name="warning" xml:space="preserve">
     <value>Atenção</value>
   </data>
+  <data name="unknownParameter" xml:space="preserve">
+    <value>Parâmetro desconhecido</value>
+  </data>
 </root>

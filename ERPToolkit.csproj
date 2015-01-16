@@ -56,6 +56,9 @@
     <Compile Include="App\Class\VisualStyles.cs" />
     <Compile Include="Class\ScriptRefactor.cs" />
     <Compile Include="Class\Xml.cs" />
+    <Compile Include="Component\ToggleSwitch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Resources\Lang\res_es_es.Designer.cs">
       <DependentUpon>res_es_es.resx</DependentUpon>
       <AutoGen>True</AutoGen>

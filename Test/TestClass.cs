@@ -58,7 +58,7 @@ namespace ERPToolkit.Test
 
             //TestChangeBlock();
 
-            //TestDefineScriptCase();            
+            //TestDefineScriptCase();
 
             #endregion
 
@@ -84,12 +84,13 @@ namespace ERPToolkit.Test
 
             //TestExtractResource();
 
+            //TestReplace();
+
             #endregion
 
             #region LastTest
 
-            //TestChangeBlock();
-
+            
             #endregion
         }
 
@@ -283,7 +284,7 @@ namespace ERPToolkit.Test
             var oGeneral = new General();
             oGeneral.Values = GetBasicValues();
 
-            MessageBox.Show(oGeneral.Replace("function", "Function", "Funtion", false));
+            MessageBox.Show(oGeneral.Replace(" function ", "Function", "Funtion", false, true));
         }
 
         #endregion

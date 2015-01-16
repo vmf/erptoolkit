@@ -22,8 +22,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Sockets;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using ERPToolkit.App.Class;
 
 namespace ERPToolkit.Class
@@ -521,9 +523,12 @@ namespace ERPToolkit.Class
         /// <param name="findWhat">What we want to find</param>
         /// <param name="replaceWith">What we want to replace(if we find)</param>
         /// <param name="matchCase">The text will be found using match case ?</param>
+        /// <param name="matchWhole">The text will be the whole world only ?</param>
         /// <returns>Replaced text(if found)</returns>
-        public string Replace(string str, string findWhat, string replaceWith, bool matchCase)
+        public string Replace(string str, string findWhat, string replaceWith, bool matchCase, bool matchWhole)
         {
+            /*if (findWhat.Equals("vbInformation"))
+                Console.WriteLine("OK");*/
             try
             {
                 var strCummulative = "";
@@ -565,27 +570,33 @@ namespace ERPToolkit.Class
                                 strCummulative += str.Substring(index, 1);
                         }
                         else
-                        {
+                        {                            
                             /* Check if it has enough length to compare. if so, it'll compare.
                              * if not it won't need to compare because if it hasn't enough length
                              * means that it's not the text because the left length
                              * is less than the length of the text we are looking for.
                              */
                             if (index <= (str.Length - findWhat.Length))
-                            {
+                            {                                
+
                                 /* Check if it is the text we are looking for */
                                 if (str.ToLower().Substring(index, findWhat.Length).Equals(findWhat.ToLower()))
-                                {
-                                    /* It gets the new text and then increments the index
-                                     * with the findWhat length because once find the findWhat
-                                     * we won't need to compare anything. Then, it adds the current substring
-                                     * (substring after the increment of the index) if there are more text.
-                                     */
-                                    strCummulative += replaceWith;
-                                    index += findWhat.Length;
+                                {                                    
+                                    bool canContinues = !matchWhole || IsValidForMatchWhole(str, findWhat, index);
 
-                                    /* Does not get the next substring if                                      
-                                     * there is no text anymore 
+                                    if (canContinues)
+                                    {
+                                        /* It gets the new text and then increments the index
+                                         * with the findWhat length because once find the findWhat
+                                         * we won't need to compare anything. Then, it adds the current substring
+                                         * (substring after the increment of the index) if there are more text.
+                                         */
+                                        strCummulative += replaceWith;
+                                        index += findWhat.Length;                                        
+                                    }
+
+                                    /* Does not get the next substring if
+                                     * there is no text anymore
                                      */
                                     if (index < str.Length)
                                         strCummulative += str.Substring(index, 1);
@@ -607,6 +618,100 @@ namespace ERPToolkit.Class
                 initEx.Handle(exception, MethodBase.GetCurrentMethod(), true);
             }
             return null;
+        }
+
+        /// <summary>
+        /// Check if the found word is valid for the match whole option
+        /// </summary>
+        /// <param name="str">String</param>
+        /// <param name="findWhat">The word we found</param>
+        /// <param name="index">The current index</param>
+        /// <returns>The truth</returns>
+        private bool IsValidForMatchWhole(string str, string findWhat, int index)
+        {            
+            bool begin, end;
+            begin = end = false;
+
+            /* It the string and the findWhat have the same 
+             * length we know that it's ok because there's just
+             * the word we want to find in the string
+             */
+            if (str.Length == findWhat.Length)
+                begin = end = true;
+
+            /* If the word was found in the first character of the string
+             * it's ok
+             */
+            else if (index == 0)
+                begin = true;
+            else
+            {
+                /* Checks the char that comes first to the findWhat */
+                if ((index - 1) >= 0)
+                {
+                    var newIndex = index - 1;                    
+                    switch (str.Substring(newIndex, 1))
+                    {
+                        case " ":
+                            begin = true;
+                            break;
+                        case "\t":
+                            begin = true;
+                            break;
+                        case "(":
+                            begin = true;
+                            break;
+                        case ".":
+                            begin = true;
+                            break;
+                        case ",":
+                            begin = true;
+                            break;
+                        case "\"":
+                            begin = true;
+                            break;
+                    }
+                }
+            }
+
+            if (index == (str.Length - findWhat.Length))
+                end = true;
+            else
+            {
+                /* Checks the char that comes after to the findWhat */
+                if ((index + findWhat.Length) <= str.Length)
+                {
+                    var newIndex = index + findWhat.Length;
+                    switch (str.Substring(newIndex, 1))
+                    {
+                        case " ":
+                            end = true;
+                            break;
+                       case "\t":
+                            end = true;
+                            break;
+                        case ")":
+                            end = true;
+                            break;
+                        case "(":
+                            end = true;
+                            break;
+                        case ".":
+                            end = true;
+                            break;
+                        case ",":
+                            end = true;
+                            break;
+                        case "\"":
+                            begin = true;
+                            break;
+                    }                    
+                }
+            }
+
+            if (begin && end)
+                return true;
+            return false;
         }
 
         #endregion
